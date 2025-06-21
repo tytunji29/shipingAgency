@@ -1,0 +1,60 @@
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\bin\Debug\net8.0\VubidsServices.deps.json
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\bin\Debug\net8.0\VubidsServices.dll
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\bin\Debug\net8.0\VubidsServices.pdb
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\bin\Debug\net8.0\UtilitiesServices.dll
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\bin\Debug\net8.0\Vubids.Domain.dll
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\bin\Debug\net8.0\VubidsRespository.dll
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\bin\Debug\net8.0\Vubids.Domain.pdb
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\bin\Debug\net8.0\VubidsRespository.pdb
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\bin\Debug\net8.0\UtilitiesServices.pdb
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.csproj.AssemblyReference.cache
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.AssemblyInfoInputs.cache
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.AssemblyInfo.cs
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.csproj.CoreCompileInputs.cache
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.sourcelink.json
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\obj\Debug\net8.0\VubidsSe.A2EFCC3D.Up2Date
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.dll
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\obj\Debug\net8.0\refint\VubidsServices.dll
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.pdb
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Services\obj\Debug\net8.0\ref\VubidsServices.dll
+C:\WORKs\KayBill Technologies\VubidsApi\Services\bin\Debug\net8.0\VubidsServices.deps.json
+C:\WORKs\KayBill Technologies\VubidsApi\Services\bin\Debug\net8.0\VubidsServices.dll
+C:\WORKs\KayBill Technologies\VubidsApi\Services\bin\Debug\net8.0\VubidsServices.pdb
+C:\WORKs\KayBill Technologies\VubidsApi\Services\bin\Debug\net8.0\UtilitiesServices.dll
+C:\WORKs\KayBill Technologies\VubidsApi\Services\bin\Debug\net8.0\Vubids.Domain.dll
+C:\WORKs\KayBill Technologies\VubidsApi\Services\bin\Debug\net8.0\VubidsRespository.dll
+C:\WORKs\KayBill Technologies\VubidsApi\Services\bin\Debug\net8.0\Vubids.Domain.pdb
+C:\WORKs\KayBill Technologies\VubidsApi\Services\bin\Debug\net8.0\VubidsRespository.pdb
+C:\WORKs\KayBill Technologies\VubidsApi\Services\bin\Debug\net8.0\UtilitiesServices.pdb
+C:\WORKs\KayBill Technologies\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.csproj.AssemblyReference.cache
+C:\WORKs\KayBill Technologies\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\WORKs\KayBill Technologies\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.AssemblyInfoInputs.cache
+C:\WORKs\KayBill Technologies\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.AssemblyInfo.cs
+C:\WORKs\KayBill Technologies\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.csproj.CoreCompileInputs.cache
+C:\WORKs\KayBill Technologies\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.sourcelink.json
+C:\WORKs\KayBill Technologies\VubidsApi\Services\obj\Debug\net8.0\VubidsSe.A2EFCC3D.Up2Date
+C:\WORKs\KayBill Technologies\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.dll
+C:\WORKs\KayBill Technologies\VubidsApi\Services\obj\Debug\net8.0\refint\VubidsServices.dll
+C:\WORKs\KayBill Technologies\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.pdb
+C:\WORKs\KayBill Technologies\VubidsApi\Services\obj\Debug\net8.0\ref\VubidsServices.dll
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\bin\Debug\net8.0\VubidsServices.deps.json
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\bin\Debug\net8.0\VubidsServices.dll
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\bin\Debug\net8.0\VubidsServices.pdb
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\bin\Debug\net8.0\UtilitiesServices.dll
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\bin\Debug\net8.0\Vubids.Domain.dll
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\bin\Debug\net8.0\VubidsRespository.dll
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\bin\Debug\net8.0\Vubids.Domain.pdb
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\bin\Debug\net8.0\VubidsRespository.pdb
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\bin\Debug\net8.0\UtilitiesServices.pdb
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.csproj.AssemblyReference.cache
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.AssemblyInfoInputs.cache
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.AssemblyInfo.cs
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.csproj.CoreCompileInputs.cache
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.sourcelink.json
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\obj\Debug\net8.0\VubidsSe.A2EFCC3D.Up2Date
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.dll
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\obj\Debug\net8.0\refint\VubidsServices.dll
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\obj\Debug\net8.0\VubidsServices.pdb
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Services\obj\Debug\net8.0\ref\VubidsServices.dll

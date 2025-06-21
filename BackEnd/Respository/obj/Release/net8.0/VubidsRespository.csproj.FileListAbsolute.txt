@@ -1,0 +1,36 @@
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\bin\Release\net8.0\VubidsRespository.deps.json
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\bin\Release\net8.0\VubidsRespository.runtimeconfig.json
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\bin\Release\net8.0\VubidsRespository.dll
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\bin\Release\net8.0\VubidsRespository.pdb
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\bin\Release\net8.0\Vubids.Domain.dll
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\bin\Release\net8.0\Vubids.Domain.pdb
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.csproj.AssemblyReference.cache
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.GeneratedMSBuildEditorConfig.editorconfig
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.AssemblyInfoInputs.cache
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.AssemblyInfo.cs
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.csproj.CoreCompileInputs.cache
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.sourcelink.json
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\obj\Release\net8.0\VubidsRe.35FADC4D.Up2Date
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.dll
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\obj\Release\net8.0\refint\VubidsRespository.dll
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.pdb
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.genruntimeconfig.cache
+C:\EXCELLENTSOFT_APPS\Samuel\VubidsApi\Respository\obj\Release\net8.0\ref\VubidsRespository.dll
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\bin\Release\net8.0\VubidsRespository.deps.json
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\bin\Release\net8.0\VubidsRespository.runtimeconfig.json
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\bin\Release\net8.0\VubidsRespository.dll
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\bin\Release\net8.0\VubidsRespository.pdb
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\bin\Release\net8.0\Vubids.Domain.dll
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\bin\Release\net8.0\Vubids.Domain.pdb
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.csproj.AssemblyReference.cache
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.AssemblyInfoInputs.cache
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.AssemblyInfo.cs
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.csproj.CoreCompileInputs.cache
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.sourcelink.json
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\obj\Release\net8.0\VubidsRe.35FADC4D.Up2Date
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.dll
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\obj\Release\net8.0\refint\VubidsRespository.dll
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.pdb
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\obj\Release\net8.0\VubidsRespository.genruntimeconfig.cache
+C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Respository\obj\Release\net8.0\ref\VubidsRespository.dll

@@ -1,0 +1,437 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\VubbidsAPIProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7B6396-CCC1-4141-A70B-341E07392797}|..\\Respository\\VubidsRespository.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\respository\\repos\\manageshipmentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C93082-F54F-4294-AC52-906AA71996E8}|..\\Services\\VubidsServices.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\services\\shipmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C93082-F54F-4294-AC52-906AA71996E8}|..\\Services\\VubidsServices.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\services\\extensions\\whatsappnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EEFAE96-6655-471A-892A-41C559AE99DB}|..\\UsersAPI\\VubUsersAPI.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\usersapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C93082-F54F-4294-AC52-906AA71996E8}|..\\Services\\VubidsServices.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\services\\quoteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}|..\\Domain\\Vubids.Domain.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\domain\\interfaces\\iservices\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C93082-F54F-4294-AC52-906AA71996E8}|..\\Services\\VubidsServices.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7B6396-CCC1-4141-A70B-341E07392797}|..\\Respository\\VubidsRespository.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\respository\\repos\\manageuserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}|..\\Domain\\Vubids.Domain.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\domain\\interfaces\\irepositories\\imanageshipmentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}|..\\Domain\\Vubids.Domain.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\domain\\dtos\\requestdtos\\userrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C93082-F54F-4294-AC52-906AA71996E8}|..\\Services\\VubidsServices.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\services\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EEFAE96-6655-471A-892A-41C559AE99DB}|..\\UsersAPI\\VubUsersAPI.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\usersapi\\controllers\\quotescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}|..\\Domain\\Vubids.Domain.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\domain\\dtos\\responsedtos\\shipmentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}|..\\Domain\\Vubids.Domain.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\domain\\entities\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EEFAE96-6655-471A-892A-41C559AE99DB}|..\\UsersAPI\\VubUsersAPI.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\usersapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EEFAE96-6655-471A-892A-41C559AE99DB}|..\\UsersAPI\\VubUsersAPI.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\usersapi\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}|..\\Domain\\Vubids.Domain.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\domain\\dtos\\responsedtos\\account\\customerloginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}|..\\Domain\\Vubids.Domain.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\domain\\entities\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EEFAE96-6655-471A-892A-41C559AE99DB}|..\\UsersAPI\\VubUsersAPI.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\usersapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}|..\\Domain\\Vubids.Domain.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\domain\\interfaces\\iservices\\ishipmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EEFAE96-6655-471A-892A-41C559AE99DB}|..\\UsersAPI\\VubUsersAPI.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\vubidsapi\\usersapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ManageShipmentRepo.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Respository\\Repos\\ManageShipmentRepo.cs",
+              "RelativeDocumentMoniker": "..\\Respository\\Repos\\ManageShipmentRepo.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Respository\\Repos\\ManageShipmentRepo.cs",
+              "RelativeToolTip": "..\\Respository\\Repos\\ManageShipmentRepo.cs",
+              "ViewState": "AgIAADwAAACAmZmZmZkrwEUAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T11:12:07.004Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Services\\AuthService.cs",
+              "RelativeToolTip": "..\\Services\\AuthService.cs",
+              "ViewState": "AgIAANwBAAAAWGZmZmYGwOIBAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T05:28:00.858Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{7f40df72-066b-4810-a08b-c0fbed76c948}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{7f40df72-066b-4810-a08b-c0fbed76c948}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShipmentService.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Services\\ShipmentService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\ShipmentService.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Services\\ShipmentService.cs",
+              "RelativeToolTip": "..\\Services\\ShipmentService.cs",
+              "ViewState": "AgIAAFgAAACgmZmZmZkiwG0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T09:15:10.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WhatsappNotification.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Services\\Extensions\\WhatsappNotification.cs",
+              "RelativeDocumentMoniker": "..\\Services\\Extensions\\WhatsappNotification.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Services\\Extensions\\WhatsappNotification.cs",
+              "RelativeToolTip": "..\\Services\\Extensions\\WhatsappNotification.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAIwDAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T04:03:07.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\UsersAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\appsettings.json",
+              "RelativeToolTip": "..\\UsersAPI\\appsettings.json",
+              "ViewState": "AgIAABsAAABgZmZmZmYkwCQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-10T10:58:00.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IManageShipmentRepo.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Interfaces\\IRepositories\\IManageShipmentRepo.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IRepositories\\IManageShipmentRepo.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Interfaces\\IRepositories\\IManageShipmentRepo.cs",
+              "RelativeToolTip": "..\\Domain\\Interfaces\\IRepositories\\IManageShipmentRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T04:36:48.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Interfaces\\IServices\\IAuthService.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IServices\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Interfaces\\IServices\\IAuthService.cs",
+              "RelativeToolTip": "..\\Domain\\Interfaces\\IServices\\IAuthService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwBMAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T04:40:52.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "QuoteService.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Services\\QuoteService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\QuoteService.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Services\\QuoteService.cs",
+              "RelativeToolTip": "..\\Services\\QuoteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T17:17:50.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ManageUserRepo.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Respository\\Repos\\ManageUserRepo.cs",
+              "RelativeDocumentMoniker": "..\\Respository\\Repos\\ManageUserRepo.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Respository\\Repos\\ManageUserRepo.cs",
+              "RelativeToolTip": "..\\Respository\\Repos\\ManageUserRepo.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAwwHEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T07:01:15.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Dtos\\RequestDtos\\UserRequestDto.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Dtos\\RequestDtos\\UserRequestDto.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Dtos\\RequestDtos\\UserRequestDto.cs",
+              "RelativeToolTip": "..\\Domain\\Dtos\\RequestDtos\\UserRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T00:19:22.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ServiceExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Services\\Extensions\\ServiceExtensions.cs",
+              "RelativeDocumentMoniker": "..\\Services\\Extensions\\ServiceExtensions.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Services\\Extensions\\ServiceExtensions.cs",
+              "RelativeToolTip": "..\\Services\\Extensions\\ServiceExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T04:08:29.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "QuotesController.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\Controllers\\QuotesController.cs",
+              "RelativeDocumentMoniker": "..\\UsersAPI\\Controllers\\QuotesController.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\Controllers\\QuotesController.cs",
+              "RelativeToolTip": "..\\UsersAPI\\Controllers\\QuotesController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAIAwwCYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T03:12:58.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ShipmentResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Dtos\\ResponseDtos\\ShipmentResponseDto.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Dtos\\ResponseDtos\\ShipmentResponseDto.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Dtos\\ResponseDtos\\ShipmentResponseDto.cs",
+              "RelativeToolTip": "..\\Domain\\Dtos\\ResponseDtos\\ShipmentResponseDto.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwBYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T03:28:28.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Shipment.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Entities\\Shipment.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Shipment.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Entities\\Shipment.cs",
+              "RelativeToolTip": "..\\Domain\\Entities\\Shipment.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwBcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T22:11:25.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\Program.cs",
+              "RelativeDocumentMoniker": "..\\UsersAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\Program.cs",
+              "RelativeToolTip": "..\\UsersAPI\\Program.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAADgvzQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T09:09:48.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ShipmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\Controllers\\ShipmentsController.cs",
+              "RelativeDocumentMoniker": "..\\UsersAPI\\Controllers\\ShipmentsController.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\Controllers\\ShipmentsController.cs",
+              "RelativeToolTip": "..\\UsersAPI\\Controllers\\ShipmentsController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADgvyUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T11:09:58.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CustomerLoginResponse.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Dtos\\ResponseDtos\\Account\\CustomerLoginResponse.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Dtos\\ResponseDtos\\Account\\CustomerLoginResponse.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Dtos\\ResponseDtos\\Account\\CustomerLoginResponse.cs",
+              "RelativeToolTip": "..\\Domain\\Dtos\\ResponseDtos\\Account\\CustomerLoginResponse.cs",
+              "ViewState": "AgIAAAUAAABAMzMzMzMjwBIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T05:30:07.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Company.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Entities\\Company.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Company.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Entities\\Company.cs",
+              "RelativeToolTip": "..\\Domain\\Entities\\Company.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T05:24:47.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IShipmentService.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Interfaces\\IServices\\IShipmentService.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IServices\\IShipmentService.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Interfaces\\IServices\\IShipmentService.cs",
+              "RelativeToolTip": "..\\Domain\\Interfaces\\IServices\\IShipmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:20:51.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "..\\UsersAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "..\\UsersAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACEAAACAZmZmZmYiwDIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T12:44:59.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "..\\UsersAPI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "..\\UsersAPI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-10T10:53:31.971Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

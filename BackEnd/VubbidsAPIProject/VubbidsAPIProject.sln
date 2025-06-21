@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilitiesServices", "..\Utilities\UtilitiesServices.csproj", "{D355A690-7B5F-4889-AC01-0CC71FC35D5A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vubids.Domain", "..\Domain\Vubids.Domain.csproj", "{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VubidsAdminAPI", "..\AdminAPI\VubidsAdminAPI.csproj", "{F75C6992-1369-422E-9177-C8C5719FAEB7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VubidsServices", "..\Services\VubidsServices.csproj", "{D0C93082-F54F-4294-AC52-906AA71996E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VubidsRespository", "..\Respository\VubidsRespository.csproj", "{DF7B6396-CCC1-4141-A70B-341E07392797}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VubUsersAPI", "..\UsersAPI\VubUsersAPI.csproj", "{4EEFAE96-6655-471A-892A-41C559AE99DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D355A690-7B5F-4889-AC01-0CC71FC35D5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D355A690-7B5F-4889-AC01-0CC71FC35D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D355A690-7B5F-4889-AC01-0CC71FC35D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D355A690-7B5F-4889-AC01-0CC71FC35D5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3566FD4A-62D1-4B49-BE95-E00B39CD8B8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F75C6992-1369-422E-9177-C8C5719FAEB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F75C6992-1369-422E-9177-C8C5719FAEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F75C6992-1369-422E-9177-C8C5719FAEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F75C6992-1369-422E-9177-C8C5719FAEB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0C93082-F54F-4294-AC52-906AA71996E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C93082-F54F-4294-AC52-906AA71996E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C93082-F54F-4294-AC52-906AA71996E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C93082-F54F-4294-AC52-906AA71996E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF7B6396-CCC1-4141-A70B-341E07392797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF7B6396-CCC1-4141-A70B-341E07392797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF7B6396-CCC1-4141-A70B-341E07392797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF7B6396-CCC1-4141-A70B-341E07392797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EEFAE96-6655-471A-892A-41C559AE99DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EEFAE96-6655-471A-892A-41C559AE99DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EEFAE96-6655-471A-892A-41C559AE99DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EEFAE96-6655-471A-892A-41C559AE99DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05B0293D-C4C0-4478-9193-86C50961AAB6}
+	EndGlobalSection
+EndGlobal

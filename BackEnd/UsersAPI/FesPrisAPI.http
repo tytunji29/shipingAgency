@@ -1,0 +1,6 @@
+@FesPrisAPI_HostAddress = http://localhost:5140
+
+GET {{FesPrisAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

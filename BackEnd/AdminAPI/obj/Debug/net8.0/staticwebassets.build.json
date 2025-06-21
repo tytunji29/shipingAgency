@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "sukl+Br6wo7sVlNctBZDch6qu9dzFzzCMWNTGmvW72g=",
+  "Source": "VubidsAdminAPI",
+  "BasePath": "_content/VubidsAdminAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\VubUsersAPI.csproj",
+      "Version": 2,
+      "Source": "VubUsersAPI",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
