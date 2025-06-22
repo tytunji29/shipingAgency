@@ -64,6 +64,39 @@ function StepTwo({ formData, setFormData, setStartData, handleNext }: StepTwoPro
         </div>
         {/* Pickup and Delivery Dates */}
         <div className="grid grid-cols-2 gap-4">
+            {/* Pickup Date */}
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button
+                variant="outline"
+                className="w-full justify-start text-left font-normal"
+              >
+                {deliveryData.pickupDate
+                  ? format(new Date(deliveryData.pickupDate), "MM/dd/yyyy")
+                  : "Pick a pickup date"}
+                <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-auto p-0">
+              <Calendar
+                mode="single"
+                selected={
+                  deliveryData.pickupDate ? new Date(deliveryData.pickupDate) : undefined
+                }
+                onSelect={(date) =>
+                  setFormData((prev: any) => ({
+                    ...prev,
+                    deliveryPickupRequest: {
+                      ...prev.deliveryPickupRequest,
+                      pickupDate: date?.toISOString() || "",
+                    },
+                  }))
+                }
+                initialFocus
+              />
+            </PopoverContent>
+          </Popover>
+          
           {/* Delivery Date */}
           <Popover>
             <PopoverTrigger asChild>
@@ -96,38 +129,7 @@ function StepTwo({ formData, setFormData, setStartData, handleNext }: StepTwoPro
               />
             </PopoverContent>
           </Popover>
-          {/* Pickup Date */}
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button
-                variant="outline"
-                className="w-full justify-start text-left font-normal"
-              >
-                {deliveryData.pickupDate
-                  ? format(new Date(deliveryData.pickupDate), "MM/dd/yyyy")
-                  : "Pick a pickup date"}
-                <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-auto p-0">
-              <Calendar
-                mode="single"
-                selected={
-                  deliveryData.pickupDate ? new Date(deliveryData.pickupDate) : undefined
-                }
-                onSelect={(date) =>
-                  setFormData((prev: any) => ({
-                    ...prev,
-                    deliveryPickupRequest: {
-                      ...prev.deliveryPickupRequest,
-                      pickupDate: date?.toISOString() || "",
-                    },
-                  }))
-                }
-                initialFocus
-              />
-            </PopoverContent>
-          </Popover>
+        
         </div>
         {/* Map Image */}
         <div className="mt-4">

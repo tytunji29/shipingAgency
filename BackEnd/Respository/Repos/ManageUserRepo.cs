@@ -121,6 +121,10 @@ namespace JetSend.Respository.Repos
         {
             return await _db.Customers.FirstOrDefaultAsync(c => c.Email == email);
         }
+        public async Task<Agent?> GetAgent(string email)
+        {
+            return await _db.Agents.FirstOrDefaultAsync(c => c.Email == email);
+        }
 
         public async Task<IEnumerable<Customer>> GetCustomers()
         {

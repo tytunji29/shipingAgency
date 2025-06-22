@@ -349,6 +349,9 @@ namespace JetSendsServices
                     }
                 }
                 string iscus = "";
+                var roles = await _userManager.GetRolesAsync(user);
+                iscus = roles.FirstOrDefault();
+
                 var customer = await _unitOfWork.ManageUserRepo.GetAuthUserByEmail(user.Email!);
                 if (customer == null)
                     return new ApiResponse<CustomerLoginResponse> { Message = "Customer record not found, check and try again later.", StatusCode = StatusEnum.NoRecordFound, Status = false };
@@ -370,7 +373,7 @@ namespace JetSendsServices
                     CustomerId = customer.Id,
                     PhoneNumber = customer.PhoneNumber,
                     Token = token,
-                    IsCompany = "No",
+                    IsCompany = iscus == "Agent" ? "Yes" : "No",
                     Photo = string.IsNullOrEmpty(customer.Photo) ? _appSettings.Value.DefaultImageUrl : customer.Photo,
                 };
 
@@ -501,8 +504,18 @@ namespace JetSendsServices
         public async Task<ApiResponse<CustomerProfileResponse>> GetCustometProfile()
         {
             var loggedInUser = await ValidateRequest();
-            var customerProfile = await _unitOfWork.ManageUserRepo.GetProfile(loggedInUser.Email);
-
+            var customerProfile = new CustomerProfileResponse
+            {
+                Email = loggedInUser.Email,
+                FirstName = loggedInUser.FirstName,
+                LastName = loggedInUser.LastName,
+                PhoneNumber = loggedInUser.PhoneNumber,
+                UserId = loggedInUser.UserId,
+                Photo = string.IsNullOrEmpty(loggedInUser.Photo) ? "" : loggedInUser.Photo,
+                DateOfBirth = loggedInUser.CreateDateTime.ToString("yyyy-MM-dd"),
+                Address = string.IsNullOrWhiteSpace(loggedInUser.Address) ? "Not provided" : loggedInUser.Address
+            };
+          
             if (customerProfile is null)
                 return new ApiResponse<CustomerProfileResponse> { StatusCode = StatusEnum.NoRecordFound, Status = false, Message = "Customer record not found." };
             return new ApiResponse<CustomerProfileResponse> { StatusCode = StatusEnum.Success, Status = true, Message = "Customer profile fetched successfully.", Data = customerProfile };
@@ -574,19 +587,40 @@ namespace JetSendsServices
             var rs = await _generateTokenService.GetUserTokenParams(AuthToken);
             if (rs != null)
             {
-                var customer = await _unitOfWork.ManageUserRepo.GetCustomer(rs.UserName);
-                if (customer != null)
+                if (rs.RoleName == "Customer")
                 {
-                    res.UserId = customer.UserId;
-                    res.PhoneNumber = customer.PhoneNumber;
-                    res.FirstName = customer.FirstName;
-                    res.Email = customer.Email;
-                    res.LastName = customer.LastName;
-                    res.Photo = customer.Photo;
-                    res.CreateDateTime = customer.TimeCreated;
+                    var customer = await _unitOfWork.ManageUserRepo.GetCustomer(rs.UserName);
+                    if (customer != null)
+                    {
+                        res.UserId = customer.UserId;
+                        res.PhoneNumber = customer.PhoneNumber;
+                        res.FirstName = customer.FirstName;
+                        res.Email = customer.Email;
+                        res.LastName = customer.LastName;
+                        res.Photo = customer.Photo;
+                        res.Address = customer.Address;
+                        res.CreateDateTime = customer.TimeCreated;
+                    }
+                    else
+                        throw new ApiGenericException("User is null");
                 }
                 else
-                    throw new ApiGenericException("User is null");
+                {
+                    var customer = await _unitOfWork.ManageUserRepo.GetAgent(rs.UserName);
+                    if (customer != null)
+                    {
+                        res.UserId = customer.UserId;
+                        res.PhoneNumber = customer.PhoneNumber;
+                        res.FirstName = customer.FirstName;
+                        res.Email = customer.Email;
+                        res.LastName = customer.LastName;
+                        res.Photo = customer.Photo;
+                        res.Address = customer.HouseAddress;
+                        res.CreateDateTime = customer.TimeCreated;
+                    }
+                    else
+                        throw new ApiGenericException("User is null");
+                }
             }
 
             else throw new ApiGenericException(GenericStrings.InvalidUserRequest);

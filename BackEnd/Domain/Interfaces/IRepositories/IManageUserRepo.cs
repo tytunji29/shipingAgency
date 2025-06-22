@@ -21,6 +21,7 @@ namespace JetSend.Domain.Interfaces.IRepositories
         Task<ApplicationUsers?> GetAuthUserByEmail(string email);
         Task<IEnumerable<ApplicationUsers>> GetAuthUsers();
         Task<Customer?> GetCustomer(string email);
+        Task<Agent?> GetAgent(string email);
         Task<Customer?> GetCustomer(string email, string userId);
         Task<OtpVerificationLog?> GetOtpVerificationLog(string code);
         Task<IEnumerable<OtpVerificationLog>> GetOtpVerificationLogs();

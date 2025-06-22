@@ -11,7 +11,8 @@ namespace JetSend.Domain.Interfaces.IServices
     public interface IManageGeneralSetUpService
     {
         Task<ApiResponse<IEnumerable<RegionState>>> GetRegionStates();
-        Task<ApiResponse<IEnumerable<RegionLga>>> GetRegionLgas();
+        Task<ApiResponse<IEnumerable<VehicleType>>> GetVehicleTypes();
+        Task<ApiResponse<IEnumerable<RegionLga>>> GetRegionLgas(int stateid);
         Task<ApiResponse> AddRegionState(string name);
         Task<ApiResponse> AddRegionLga(string name, int stateId);
         //ItemType

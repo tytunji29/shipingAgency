@@ -29,9 +29,10 @@ namespace JetSendsServices
 
         #endregion 
         #region RegionLga
-        public async Task<ApiResponse<IEnumerable<RegionLga>>> GetRegionLgas()
+        public async Task<ApiResponse<IEnumerable<RegionLga>>> GetRegionLgas(int stateid)
         {
-            var result = await _unitOfWork.ManageGeneralSetUpRepo.GetAllRegionLga();
+
+            var result = await _unitOfWork.ManageGeneralSetUpRepo.GetAllRegionLga(stateid);
             return new ApiResponse<IEnumerable<RegionLga>> { StatusCode = StatusEnum.Success, Status = true, Message = "Item categories fetched successfully.", Data = result };
         }
 
@@ -48,6 +49,11 @@ namespace JetSendsServices
         {
             var result = await _unitOfWork.ManageGeneralSetUpRepo.GetAllRegionState();
             return new ApiResponse<IEnumerable<RegionState>> { StatusCode = StatusEnum.Success, Status = true, Message = "Item categories fetched successfully.", Data = result };
+        }
+         public async Task<ApiResponse<IEnumerable<VehicleType>>> GetVehicleTypes()
+        {
+            var result = await _unitOfWork.ManageGeneralSetUpRepo.GetAllVehicleType();
+            return new ApiResponse<IEnumerable<VehicleType>> { StatusCode = StatusEnum.Success, Status = true, Message = "Item categories fetched successfully.", Data = result };
         }
 
         public async Task<ApiResponse> AddRegionState(string name)

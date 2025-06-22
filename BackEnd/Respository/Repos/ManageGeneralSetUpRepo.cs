@@ -30,6 +30,10 @@ public class ManageGeneralSetUpRepo : IManageGeneralSetUpRepo
     {
         return await _context.RegionState.ToListAsync();
     }
+    public async Task<IEnumerable<VehicleType>> GetAllVehicleType()
+    {
+        return await _context.VehicleTypes.ToListAsync();
+    }
     public async Task AddRegionState(string name)
     {
         var item = new RegionState { Name = name };
@@ -40,13 +44,13 @@ public class ManageGeneralSetUpRepo : IManageGeneralSetUpRepo
 
     #endregion
     #region RegionLga
-    public async Task<IEnumerable<RegionLga>> GetAllRegionLga()
+    public async Task<IEnumerable<RegionLga>> GetAllRegionLga(int stateid)
     {
-        return await _context.RegionLga.ToListAsync();
+        return await _context.RegionLga.Where(o => o.StateId == stateid).ToListAsync();
     }
-    public async Task AddRegionLga(string name,int stateId)
+    public async Task AddRegionLga(string name, int stateId)
     {
-        var item = new RegionLga { Name = name, StateId=stateId };
+        var item = new RegionLga { Name = name, StateId = stateId };
         await _context.RegionLga.AddAsync(item);
         await _context.SaveChangesAsync();
     }

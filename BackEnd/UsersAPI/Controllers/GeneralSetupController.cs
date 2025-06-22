@@ -46,7 +46,14 @@ public class GeneralSetupController : APIBaseController
     {
         var response = await _itemService.GetRegionStates();
         return ResponseCode(response);
-    }  // RegionLga
+    }   [HttpGet("get-all-vehicletypes")]
+    [ProducesResponseType(typeof(ApiResponse<IEnumerable<VehicleType>>), (int)HttpStatusCode.OK)]
+    public async Task<IActionResult> GetAllVehicleTypes()
+    {
+        var response = await _itemService.GetVehicleTypes();
+        return ResponseCode(response);
+    } 
+    // RegionLga
     [HttpPost("add-region-lga")]
     [ProducesResponseType(typeof(ApiResponse), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> AddRegionLga(string name, int stateId)
@@ -54,11 +61,12 @@ public class GeneralSetupController : APIBaseController
         var response = await _itemService.AddRegionLga(name, stateId);
         return ResponseCode(response);
     }
-    [HttpGet("get-all-region-lga")]
+    [HttpGet("get-all-region-lga/{stateid}")]
     [ProducesResponseType(typeof(ApiResponse<IEnumerable<RegionLga>>), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> GetAllRegionLgas()
+    public async Task<IActionResult> GetAllRegionLgas(string stateid)
     {
-        var response = await _itemService.GetRegionLgas();
+        int stId = Convert.ToInt32(stateid);
+        var response = await _itemService.GetRegionLgas(stId);
         return ResponseCode(response);
     }
 

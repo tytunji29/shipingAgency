@@ -8,7 +8,7 @@ function HeroSection() {
     <div
       className="relative w-full h-screen xl:h-[90vh] bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: 'url("/images/5.png")',
+        backgroundImage: 'url("/images/6.png")',
       }}
     >
       <div className="absolute  w-[100%] px-[20px] md:px-[40px] xl:px-[100px]">

@@ -40,7 +40,7 @@ export default function SideNavbar() {
   return (
     <div className="w-full max-w-[17rem] mx-auto bg-white hidden lg:flex flex-col border-r border-gray-100">
       <div className="p-6">
-        <h1 className="text-[15px] font-medium text-gray-500">My Vubids</h1>
+        <h1 className="text-[15px] font-medium text-gray-500">Jet Send</h1>
       </div>
 
       <nav className="flex-1">
@@ -114,13 +114,13 @@ export default function SideNavbar() {
       <div className="mt-auto border-t border-gray-200">
         <div className="p-4 flex items-center gap-3">
           <div className="relative w-12 h-12 rounded-full overflow-hidden">
-            <Image
-              src="/images/avatar.webp"
-              alt="Profile picture"
-              width={48}
-              height={48}
-              className="object-cover"
-            />
+           <Image
+  src={state.user?.photo || "/images/avatar.webp"}
+  alt="Profile picture"
+  width={48}
+  height={48}
+  className="object-cover"
+/>
           </div>
           <div className="flex-1">
             <h3 className="text-[13px] font-medium text-gray-800">

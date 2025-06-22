@@ -1032,6 +1032,45 @@
         }
       }
     },
+    "/app/v{version}/GeneralSetup/get-all-vehicletypes": {
+      "get": {
+        "tags": [
+          "GeneralSetup"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VehicleTypeIEnumerableApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VehicleTypeIEnumerableApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VehicleTypeIEnumerableApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/app/v{version}/GeneralSetup/add-region-lga": {
       "post": {
         "tags": [
@@ -1086,12 +1125,20 @@
         }
       }
     },
-    "/app/v{version}/GeneralSetup/get-all-region-lga": {
+    "/app/v{version}/GeneralSetup/get-all-region-lga/{stateid}": {
       "get": {
         "tags": [
           "GeneralSetup"
         ],
         "parameters": [
+          {
+            "name": "stateid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "name": "version",
             "in": "path",
@@ -3752,6 +3799,71 @@
           },
           "dateOfBirth": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VehicleType": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "regDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VehicleTypeIEnumerableApiResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "statusCode": {
+            "$ref": "#/components/schemas/StatusEnum"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "currentPageCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "currentPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VehicleType"
+            },
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
             "nullable": true
           }
         },

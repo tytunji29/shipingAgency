@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
+// next.config.js or next.config.ts
 
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ['res.cloudinary.com'], // ✅ Add allowed external domain here
+  },
 };
 
 export default nextConfig;

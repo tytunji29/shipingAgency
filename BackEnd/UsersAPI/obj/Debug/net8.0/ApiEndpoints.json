@@ -726,11 +726,16 @@
   {
     "ContainingType": "JetSend.API.Controllers.GeneralSetupController",
     "Method": "GetAllRegionLgas",
-    "RelativePath": "app/v{version}/GeneralSetup/get-all-region-lga",
+    "RelativePath": "app/v{version}/GeneralSetup/get-all-region-lga/{stateid}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "stateid",
+        "Type": "System.String",
+        "IsRequired": true
+      },
       {
         "Name": "version",
         "Type": "",
@@ -766,6 +771,32 @@
     "ReturnTypes": [
       {
         "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Entities.RegionState, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.GeneralSetupController",
+    "Method": "GetAllVehicleTypes",
+    "RelativePath": "app/v{version}/GeneralSetup/get-all-vehicletypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Entities.VehicleType, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
