@@ -536,3 +536,14 @@ C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\AdminAPI\obj\Debug\net8.0\refint\
 C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\AdminAPI\obj\Debug\net8.0\VubidsAdminAPI.pdb
 C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\AdminAPI\obj\Debug\net8.0\VubidsAdminAPI.genruntimeconfig.cache
 C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\AdminAPI\obj\Debug\net8.0\ref\VubidsAdminAPI.dll
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\AdminAPI\obj\Debug\net8.0\VubidsAdminAPI.csproj.AssemblyReference.cache
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\AdminAPI\obj\Debug\net8.0\VubidsAdminAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\AdminAPI\obj\Debug\net8.0\VubidsAdminAPI.AssemblyInfoInputs.cache
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\AdminAPI\obj\Debug\net8.0\VubidsAdminAPI.AssemblyInfo.cs
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\AdminAPI\obj\Debug\net8.0\VubidsAdminAPI.csproj.CoreCompileInputs.cache
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\AdminAPI\obj\Debug\net8.0\VubidsAdminAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\AdminAPI\obj\Debug\net8.0\VubidsAdminAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\AdminAPI\obj\Debug\net8.0\VubidsAdminAPI.sourcelink.json
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\AdminAPI\obj\Debug\net8.0\VubidsAdminAPI.dll
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\AdminAPI\obj\Debug\net8.0\refint\VubidsAdminAPI.dll
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\AdminAPI\obj\Debug\net8.0\VubidsAdminAPI.pdb

@@ -27,14 +27,21 @@ namespace VubUsersAPI.Controllers
             var response = await _authService.CreateCustomer(request, cancellationToken);
             return ResponseCode(response);
         }
-
-        [HttpPost("corporate-signUp")]
+        [HttpPost("agent-signUp")]
         [ProducesResponseType(typeof(ApiResponse<string>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> CorporateSignUp([FromBody] CreateCustomerCompanyRequest request, CancellationToken cancellationToken)
+        public async Task<IActionResult> AgentSignUp([FromBody] CreateCustomerRequest request, CancellationToken cancellationToken)
         {
-            var response = await _authService.CreateCustomerCompany(request, cancellationToken);
+            var response = await _authService.CreateCustomer(request, cancellationToken);
             return ResponseCode(response);
         }
+
+        //[HttpPost("corporate-signUp")]
+        //[ProducesResponseType(typeof(ApiResponse<string>), (int)HttpStatusCode.OK)]
+        //public async Task<IActionResult> CorporateSignUp([FromBody] CreateCustomerCompanyRequest request, CancellationToken cancellationToken)
+        //{
+        //    var response = await _authService.CreateCustomerCompany(request, cancellationToken);
+        //    return ResponseCode(response);
+        //}
 
         [HttpPost("login")]
         [ProducesResponseType(typeof(ApiResponse<CustomerLoginResponse>), (int)HttpStatusCode.OK)]

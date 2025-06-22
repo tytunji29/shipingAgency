@@ -11,7 +11,7 @@ namespace Vubids.Domain.Interfaces.IServices
         Task<ApiResponse<CustomerProfileResponse>> GetCustometProfile();
         Task<ApiResponse<CustomerLoginResponse>> LoginUser(LoginRequest request);
         Task<ApiResponse<string>> CreateCustomer(CreateCustomerRequest request, CancellationToken cancellationToken);
-        Task<ApiResponse<string>> CreateCustomerCompany(CreateCustomerCompanyRequest request, CancellationToken cancellationToken);
+       // Task<ApiResponse<string>> CreateCustomerCompany(CreateCustomerCompanyRequest request, CancellationToken cancellationToken);
         Task<ApiResponse> ChangePassword(ChangePasswordRequest request, string email);
         Task<ApiResponse> ResetPassword(ResetPasswordRequest request);
         Task<ApiResponse<string>> ForgotPassword();

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VubidsAdminAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec549d71d46815c5150bf7b6cc6a0d683a3a1677")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e73e3d57c770e9120c4547f58334aaf474ac035d")]
 [assembly: System.Reflection.AssemblyProductAttribute("VubidsAdminAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VubidsAdminAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

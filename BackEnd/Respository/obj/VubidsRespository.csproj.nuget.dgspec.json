@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Respository\\VubidsRespository.csproj": {}
+    "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\VubidsRespository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Vubids.Domain.csproj": {
+    "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Vubids.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Vubids.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Vubids.Domain.csproj",
         "projectName": "Vubids.Domain",
-        "projectPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Vubids.Domain.csproj",
+        "projectPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Vubids.Domain.csproj",
         "packagesPath": "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -88,14 +88,14 @@
         }
       }
     },
-    "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Respository\\VubidsRespository.csproj": {
+    "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\VubidsRespository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Respository\\VubidsRespository.csproj",
+        "projectUniqueName": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\VubidsRespository.csproj",
         "projectName": "VubidsRespository",
-        "projectPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Respository\\VubidsRespository.csproj",
+        "projectPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\VubidsRespository.csproj",
         "packagesPath": "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Respository\\obj\\",
+        "outputPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -117,8 +117,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Vubids.Domain.csproj": {
-                "projectPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\Domain\\Vubids.Domain.csproj"
+              "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Vubids.Domain.csproj": {
+                "projectPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Vubids.Domain.csproj"
               }
             }
           }

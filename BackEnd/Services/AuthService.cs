@@ -1,4 +1,5 @@
-﻿using MeetTech.Core.Utilities.Extensions;
+﻿using System.Text;
+using MeetTech.Core.Utilities.Extensions;
 using MeetTech.Core.Utilities.Services.Messages;
 using MeetTech.Core.Utilities.Statics;
 using MeetTech.Infranstructure.Model.Configuration;
@@ -6,7 +7,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using UtilitiesServices.Statics;
 using Vubids.Core.Infranstructure.Common;
 using Vubids.Core.Infranstructure.Common.Enums;
@@ -25,6 +25,7 @@ namespace VubidsServices
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly UserManager<ApplicationUsers> _userManager;
+        private readonly RoleManager<ApplicationUsersRole> _roleManager;
         private readonly SignInManager<ApplicationUsers> _signInManager;
         private readonly IGenerateTokenService _generateTokenService;
         private readonly IOptions<AppSettings> _appSettings;
@@ -34,13 +35,14 @@ namespace VubidsServices
 
 
         public AuthService(IUnitOfWork unitOfWork, UserManager<ApplicationUsers> userManager, SignInManager<ApplicationUsers> signInManager,
-                        IGenerateTokenService generateTokenService, IOptions<AppSettings> appSettings, IEmailService emailService,
+                        IGenerateTokenService generateTokenService, RoleManager<ApplicationUsersRole> roleManager, IOptions<AppSettings> appSettings, IEmailService emailService,
                         IHttpContextAccessor httpContextAccessor)
         {
             _unitOfWork = unitOfWork;
             _userManager = userManager;
             _signInManager = signInManager;
             _generateTokenService = generateTokenService;
+            _roleManager = roleManager;
             _appSettings = appSettings;
             _emailService = emailService;
             _httpContextAccessor = httpContextAccessor;
@@ -72,17 +74,24 @@ namespace VubidsServices
 
             var uCustomer = request.ToUser();
             var createUser = await _userManager.CreateAsync(uCustomer, request.Password);
-
+            //assign role to the user
+            if (createUser.Succeeded)
+            {
+                if (!await _roleManager.RoleExistsAsync("Customer"))
+                {
+                    var role = new ApplicationUsersRole { Name = "Customer" };
+                    await _roleManager.CreateAsync(role);
+                }
+                await _userManager.AddToRoleAsync(uCustomer, "Customer");
+            }
             var customer = new Customer
             {
-                Email = request.Email,
-                Gender = request.Gender,
-                FirstName = request.Gender,
-                LastName = request.LastName,
-                PhoneNumber = request.PhoneNumber,
                 UserId = uCustomer.Id.ToString(),
-                IsAdmin = 0
+                Gender = request.Gender,
+                Address = request.Address,
+                DateOfBirth=request.DateOfBirth
             };
+
             await _unitOfWork.ManageUserRepo.AddCustomer(customer);
 
             if (!createUser.Succeeded)
@@ -111,83 +120,83 @@ namespace VubidsServices
             return new ApiResponse<string> { Status = true, Message = $"Success! Kindly check your email and use the provided code to finalize your registration.", Data = uCustomer.Id, StatusCode = StatusEnum.Success };
         }
 
-        public async Task<ApiResponse<string>> CreateCustomerCompany(CreateCustomerCompanyRequest request, CancellationToken cancellationToken)
-        {
-            var validateResult = ValidateCustomerRequest(request);
-            if (!validateResult.status.GetValueOrDefault())
-                return new ApiResponse<string> { Status = validateResult.status, Message = validateResult.message, StatusCode = validateResult.statusCode };
+        //public async Task<ApiResponse<string>> CreateCustomerCompany(CreateCustomerCompanyRequest request, CancellationToken cancellationToken)
+        //{
+        //    var validateResult = ValidateCustomerRequest(request);
+        //    if (!validateResult.status.GetValueOrDefault())
+        //        return new ApiResponse<string> { Status = validateResult.status, Message = validateResult.message, StatusCode = validateResult.statusCode };
 
-            request.Email = request.Email.Trim().ToLower();
-            var users = await _unitOfWork.ManageUserRepo.GetAuthUsers();
-            if (users.Any(us => us.Email == request.Email && us.PhoneNumber == request.PhoneNumber))
-            {
-                return new ApiResponse<string> { Message = $"Customer already exists. Please verify and try again.", StatusCode = StatusEnum.Validation };
-            }
+        //    request.Email = request.Email.Trim().ToLower();
+        //    var users = await _unitOfWork.ManageUserRepo.GetAuthUsers();
+        //    if (users.Any(us => us.Email == request.Email && us.PhoneNumber == request.PhoneNumber))
+        //    {
+        //        return new ApiResponse<string> { Message = $"Customer already exists. Please verify and try again.", StatusCode = StatusEnum.Validation };
+        //    }
 
-            if (users.Any(us => us.Email == request.Email))
-            {
-                return new ApiResponse<string> { Message = $"Email  address  {request.Email} already registered, check and try again later.", StatusCode = StatusEnum.Validation };
-            }
+        //    if (users.Any(us => us.Email == request.Email))
+        //    {
+        //        return new ApiResponse<string> { Message = $"Email  address  {request.Email} already registered, check and try again later.", StatusCode = StatusEnum.Validation };
+        //    }
 
-            if (users.Any(us => us.PhoneNumber == request.PhoneNumber))
-            {
-                return new ApiResponse<string> { Message = $"Phone number  {request.PhoneNumber} already registered, check and try again later.", StatusCode = StatusEnum.Validation };
-            }
+        //    if (users.Any(us => us.PhoneNumber == request.PhoneNumber))
+        //    {
+        //        return new ApiResponse<string> { Message = $"Phone number  {request.PhoneNumber} already registered, check and try again later.", StatusCode = StatusEnum.Validation };
+        //    }
 
-            var uCustomer = request.ToUser();
-            var createUser = await _userManager.CreateAsync(uCustomer, request.Password);
-            if (!createUser.Succeeded)
-            {
-                var errors = createUser.Errors.Select(x => x.Description);
-                return new ApiResponse<string> { Message = $"Unable to register at this time. {string.Join(" ", errors)}", StatusCode = StatusEnum.ServerError };
-            }
-            request.ToCustomer(uCustomer.Id);
+        //    var uCustomer = request.ToUser();
+        //    var createUser = await _userManager.CreateAsync(uCustomer, request.Password);
+        //    if (!createUser.Succeeded)
+        //    {
+        //        var errors = createUser.Errors.Select(x => x.Description);
+        //        return new ApiResponse<string> { Message = $"Unable to register at this time. {string.Join(" ", errors)}", StatusCode = StatusEnum.ServerError };
+        //    }
+        //    request.ToCustomer(uCustomer.Id);
 
-            var otp = CustomizeCodes.GenerateOTP(6);
-            await SendOTPCodeAsync(new SendOtpRequest
-            {
-                Code = otp,
-                FirstName = request.FirstName,
-                UserId = uCustomer.Id,
-                SenderName = "Vubids",
-                SendingMode = "Email",
-                UserEmail = uCustomer.Email ?? " ",
-                Purpose = OtpVerificationPurposeEnum.EmailVerification
-            });
+        //    var otp = CustomizeCodes.GenerateOTP(6);
+        //    await SendOTPCodeAsync(new SendOtpRequest
+        //    {
+        //        Code = otp,
+        //        FirstName = request.FirstName,
+        //        UserId = uCustomer.Id,
+        //        SenderName = "Vubids",
+        //        SendingMode = "Email",
+        //        UserEmail = uCustomer.Email ?? " ",
+        //        Purpose = OtpVerificationPurposeEnum.EmailVerification
+        //    });
 
-            var customer = new Customer
-            {
-                Email = request.Email,
-                Gender = request.Gender,
-                FirstName = request.Gender,
-                LastName = request.LastName,
-                PhoneNumber = request.PhoneNumber,
-                UserId = uCustomer.Id.ToString(),
-                IsAdmin = 1
-            };
-            await _unitOfWork.ManageUserRepo.AddCustomer(customer);
+        //    var customer = new Customer
+        //    {
+        //        Email = request.Email,
+        //        Gender = request.Gender,
+        //        FirstName = request.Gender,
+        //        LastName = request.LastName,
+        //        PhoneNumber = request.PhoneNumber,
+        //        UserId = uCustomer.Id.ToString(),
+        //        IsAdmin = 1
+        //    };
+        //    await _unitOfWork.ManageUserRepo.AddCustomer(customer);
 
-            var newCompany = new Company
-            {
-                Availability = request.Availability,
-                LoadingNo = request.LoadingNo,
-                TypeOfService = request.TypeOfService,
-                Region = request.Region,
-                NoOfVeicles = request.NoOfVeicles,
-                Rate = request.Rate,
-                Email = request.Email,
-                UserId = uCustomer.Id.ToString()
-            };
+        //    var newCompany = new Company
+        //    {
+        //        Availability = request.Availability,
+        //        LoadingNo = request.LoadingNo,
+        //        TypeOfService = request.TypeOfService,
+        //        Region = request.Region,
+        //        NoOfVeicles = request.NoOfVeicles,
+        //        Rate = request.Rate,
+        //        Email = request.Email,
+        //        UserId = uCustomer.Id.ToString()
+        //    };
 
-            await _unitOfWork.ManageCompanyRepo.AddCompany(newCompany);
+        //    await _unitOfWork.ManageCompanyRepo.AddCompany(newCompany);
 
 
-            string message = $"Hello {request.FirstName}, kindly utilize the code {otp} to finalize the registration process. We're excited to welcome you onboard!<br/><br/>";
+        //    string message = $"Hello {request.FirstName}, kindly utilize the code {otp} to finalize the registration process. We're excited to welcome you onboard!<br/><br/>";
 
-            await _emailService.SendMail_SendGrid(request.Email, "Email Verification", message, "Vubids");
+        //    await _emailService.SendMail_SendGrid(request.Email, "Email Verification", message, "Vubids");
 
-            return new ApiResponse<string> { Status = true, Message = $"Success! Kindly check your email and use the provided code to finalize your registration.", Data = uCustomer.Id, StatusCode = StatusEnum.Success };
-        }
+        //    return new ApiResponse<string> { Status = true, Message = $"Success! Kindly check your email and use the provided code to finalize your registration.", Data = uCustomer.Id, StatusCode = StatusEnum.Success };
+        //}
 
         public async Task<ApiResponse<CustomerLoginResponse>> LoginUser(LoginRequest request)
         {
@@ -244,10 +253,7 @@ namespace VubidsServices
 
                 var token = await _generateTokenService.CreateUserToken(user.UserName!, user.Id, "");
                 var cusDet = await _unitOfWork.ManageUserRepo.GetCustomerByEmail(request.Email);
-                if (cusDet != null)
-                {
-                    iscus = cusDet.IsAdmin == 0 ? "No" : "Yes";
-                }
+                
                 var response = new CustomerLoginResponse
                 {
                     UserId = user.Id,
@@ -257,7 +263,7 @@ namespace VubidsServices
                     CustomerId = customer.Id,
                     PhoneNumber = customer.PhoneNumber,
                     Token = token,
-                    IsCompany = iscus,
+                    IsCompany = "No",
                     Photo = string.IsNullOrEmpty(customer.Photo) ? _appSettings.Value.DefaultImageUrl : customer.Photo,
                 };
 
@@ -411,7 +417,7 @@ namespace VubidsServices
             customer.FirstName = string.IsNullOrWhiteSpace(request.FirstName) ? customer.FirstName : request.FirstName;
             customer.LastName = string.IsNullOrWhiteSpace(request.LastName) ? customer.LastName : request.LastName;
             customer.PhoneNumber = string.IsNullOrWhiteSpace(request.PhoneNumber) ? customer.PhoneNumber : request.PhoneNumber;
-            customer.Status = (int)EntityStatusEnum.Active;
+            //customer.Status = (int)EntityStatusEnum.Active;
             customer.TimeUpdated = DateTime.Now;
 
             await _unitOfWork.ManageUserRepo.UpdateCustomer(customer);
@@ -471,7 +477,6 @@ namespace VubidsServices
                     res.LastName = customer.LastName;
                     res.Photo = customer.Photo;
                     res.CreateDateTime = customer.TimeCreated;
-                    res.IsCompany = customer.IsAdmin == 1 ? "Yes" : "No";
                 }
                 else
                     throw new ApiGenericException("User is null");
@@ -498,7 +503,6 @@ namespace VubidsServices
                 res.LastName = customer.LastName;
                 res.Photo = customer.Photo;
                 res.CreateDateTime = customer.TimeCreated;
-                res.IsCompany = customer.IsAdmin == 1 ? "Yes" : "No";
             }
             else
                 throw new ApiGenericException("User is null");

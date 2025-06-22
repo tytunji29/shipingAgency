@@ -22,6 +22,8 @@ namespace Vubids.Domain.Dtos.RequestDtos.Account
         public string PhoneNumber { get; set; } = default!;
         public string Password { get; set; } = default!;
         public string Gender { get; set; } = default!;
+        public string Address { get; set; } = default!;
+        public string DateOfBirth { get; set; } = default!;
 
         public ApplicationUsers ToUser()
         {
@@ -45,7 +47,6 @@ namespace Vubids.Domain.Dtos.RequestDtos.Account
                 UserId = userId,
                 Email = Email,
                 PhoneNumber = PhoneNumber,
-                Status = (int)EntityStatusEnum.InActive,
                 FirstName = FirstName,
                 LastName = LastName,
                 Gender = Gender,

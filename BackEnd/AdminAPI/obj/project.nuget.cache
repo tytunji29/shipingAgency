@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PSi/nWxvbNg=",
+  "dgSpecHash": "K7NM3GJRfgo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\AdminAPI\\VubidsAdminAPI.csproj",
+  "projectFilePath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\AdminAPI\\VubidsAdminAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

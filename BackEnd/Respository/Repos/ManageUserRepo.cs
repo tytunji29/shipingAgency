@@ -152,7 +152,7 @@ namespace VubidsRespository.Repos
                 Photo = customerUser.Photo,
                 Address = customerUser.Address,
                 DateOfBirth = customerUser.DateOfBirth,
-                IsCompany = customerUser.IsAdmin == 1 ? "Yes" : "No",
+                IsCompany = "No",
             };
 
             return response;

@@ -37,3 +37,12 @@ C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Domain\obj\Debug\net8.0\Vubids.Do
 C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Domain\obj\Debug\net8.0\refint\Vubids.Domain.dll
 C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Domain\obj\Debug\net8.0\Vubids.Domain.pdb
 C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Domain\obj\Debug\net8.0\ref\Vubids.Domain.dll
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Domain\obj\Debug\net8.0\Vubids.Domain.csproj.AssemblyReference.cache
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Domain\obj\Debug\net8.0\Vubids.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Domain\obj\Debug\net8.0\Vubids.Domain.AssemblyInfoInputs.cache
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Domain\obj\Debug\net8.0\Vubids.Domain.AssemblyInfo.cs
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Domain\obj\Debug\net8.0\Vubids.Domain.csproj.CoreCompileInputs.cache
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Domain\obj\Debug\net8.0\Vubids.Domain.sourcelink.json
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Domain\obj\Debug\net8.0\Vubids.Domain.dll
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Domain\obj\Debug\net8.0\refint\Vubids.Domain.dll
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Domain\obj\Debug\net8.0\Vubids.Domain.pdb
