@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JetSend.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43773a037c7be831796315660fe04221782e4caf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a83da386d440eabf33e79cf8397695557eecbd7")]
 [assembly: System.Reflection.AssemblyProductAttribute("JetSend.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JetSend.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

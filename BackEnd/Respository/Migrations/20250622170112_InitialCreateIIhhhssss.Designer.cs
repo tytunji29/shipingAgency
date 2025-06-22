@@ -4,6 +4,7 @@ using JetSend.Respository.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JetSend.Respository.Migrations
 {
     [DbContext(typeof(JetSendDbContext))]
-    partial class JetSendDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250622170112_InitialCreateIIhhhssss")]
+    partial class InitialCreateIIhhhssss
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

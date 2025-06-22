@@ -15,9 +15,7 @@ namespace JetSend.Domain.Entities
         public string Email { get; set; } = default!;
         [MaxLength(20)]
         public string PhoneNumber { get; set; } = default!;
-        [MaxLength(20)]
         public string NationalIdentityNumber { get; set; } = default!;
-        [MaxLength(100)]
         public string? Photo { get; set; }
         [MaxLength(15)]
         public string Gender { get; set; } = default!;
@@ -26,14 +24,13 @@ namespace JetSend.Domain.Entities
         public string RegionState { get; set; }
         public string RegionLgaId { get; set; }
         public string VehicleTypeId { get; set; }
-        [MaxLength(50)]
         public string? DriverLicenseImage { get; set; }
         [MaxLength(500)]
         public string? HouseAddress { get; set; }
         [MaxLength(50)]
         public string? PlateNumber { get; set; }
         public EntityStatusEnum Status { get; set; }
-        public string ApprovedBy { get; set; } = default!;
+        public string? ApprovedBy { get; set; } 
     }
 
     public class AgentBankDetail : BaseEntity
