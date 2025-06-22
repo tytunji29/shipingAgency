@@ -1,4 +1,4 @@
-﻿namespace Vubids.Core.Infranstructure.Common.Enums
+﻿namespace JetSend.Core.Infranstructure.Common.Enums
 {
     public enum StatusEnum
     {/// <summary>
@@ -85,6 +85,7 @@
 
     public enum EntityStatusEnum
     {
+        Pending = 0,
         Active = 1,
         InActive,
         Delete

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vubids.Domain.Dtos.ResponseDtos
+namespace JetSend.Domain.Dtos.ResponseDtos
 {
     public class TransporterResponseDto
     {

@@ -8,7 +8,7 @@ using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
 
-namespace VubidsServices.Extensions;
+namespace JetSendsServices.Extensions;
 public class WhatsappNotification
 {
     private readonly IConfiguration _configuration;

@@ -1,7 +1,7 @@
-﻿using Vubids.Domain.Dtos.ResponseDtos;
-using Vubids.Domain.Entities;
+﻿using JetSend.Domain.Dtos.ResponseDtos;
+using JetSend.Domain.Entities;
 
-namespace Vubids.Domain.Interfaces.IRepositories
+namespace JetSend.Domain.Interfaces.IRepositories
 {
     public interface IManageTransporterRepo
     {

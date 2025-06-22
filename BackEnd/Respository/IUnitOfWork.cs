@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vubids.Domain.Interfaces.IRepositories;
-using VubidsRespository.DataContext;
-using VubidsRespository.Repos;
+using JetSend.Domain.Interfaces.IRepositories;
+using JetSend.Respository.DataContext;
+using JetSend.Respository.Repos;
 
-namespace VubidsRespository
+namespace JetSend.Respository
 {
     public interface IUnitOfWork
     {
@@ -22,6 +22,6 @@ namespace VubidsRespository
         IManageSupportRepo ManageSupportRepo { get; }
         IManagePaymentRepo ManagePaymentRepo { get; }
         IManageChatMessageRepo ManageChatMessageRepo { get; }
-        IManageItemsRepo ManageItemsRepo { get; }
+        IManageGeneralSetUpRepo ManageGeneralSetUpRepo { get; }
     }
 }

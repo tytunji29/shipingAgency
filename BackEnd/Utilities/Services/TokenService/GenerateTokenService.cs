@@ -4,14 +4,14 @@ using MeetTech.Infranstructure.Model.Configuration;
 using Microsoft.Extensions.Options;
 using System.Security.Claims;
 using System.Text;
-using Vubids.Domain.Interfaces.IServices;
+using JetSend.Domain.Interfaces.IServices;
 using System.IdentityModel.Tokens.Jwt;
 using MeetTech.Core.Utilities.Statics;
-using Vubids.Domain.Dtos.RequestDtos.Account;
-using Vubids.Domain.Exceptions;
+using JetSend.Domain.Dtos.RequestDtos.Account;
+using JetSend.Domain.Exceptions;
 using System.Security.Principal;
 
-namespace Vubids.Core.Utilities.Services.TokenService
+namespace JetSend.Core.Utilities.Services.TokenService
 {
     public class GenerateTokenService : IGenerateTokenService
     {

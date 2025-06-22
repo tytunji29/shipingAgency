@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vubids.Domain.Entities;
-using Vubids.Domain.Interfaces.IRepositories;
-using VubidsRespository.DataContext;
+using JetSend.Domain.Entities;
+using JetSend.Domain.Interfaces.IRepositories;
+using JetSend.Respository.DataContext;
 
-namespace VubidsRespository.Repos
+namespace JetSend.Respository.Repos
 {
     public class ManageDeliveryPickupRepo : IManageDeliveryPickupRepo
     {
-        private readonly VubidDbContext _db;
-        public ManageDeliveryPickupRepo(VubidDbContext db)
+        private readonly JetSendDbContext _db;
+        public ManageDeliveryPickupRepo(JetSendDbContext db)
         {
                 _db = db;
         }

@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Vubids.Core.Infranstructure.Common.Enums;
+using JetSend.Core.Infranstructure.Common.Enums;
 
 
-namespace Vubids.Domain.Entities.Auths
+namespace JetSend.Domain.Entities.Auths
 {
     public class OtpVerificationLog : BaseEntity
     {

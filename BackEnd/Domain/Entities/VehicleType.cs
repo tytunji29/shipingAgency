@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vubids.Domain.Entities
+namespace JetSend.Domain.Entities
 {
     public class VehicleType
     {

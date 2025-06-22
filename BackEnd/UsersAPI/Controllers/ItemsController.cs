@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using Vubids.Core.Infranstructure.Common;
-using Vubids.Domain.Entities;
-using Vubids.Domain.Interfaces.IServices;
+using JetSend.Core.Infranstructure.Common;
+using JetSend.Domain.Entities;
+using JetSend.Domain.Interfaces.IServices;
 
-namespace VubUsersAPI.Controllers;
+namespace JetSend.API.Controllers;
 [AllowAnonymous]
 public class ItemsController : APIBaseController
 {
-    private readonly IItemService _itemService;
-    public ItemsController(IItemService itemService)
+    private readonly IManageGeneralSetUpService _itemService;
+    public ItemsController(IManageGeneralSetUpService itemService)
     {
         _itemService = itemService;
     }

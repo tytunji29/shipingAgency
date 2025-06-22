@@ -12,16 +12,17 @@ using System.Reflection;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Text;
-using Vubids.Core.Utilities.Services.TokenService;
-using Vubids.Domain.Entities.Auths;
-using Vubids.Domain.Interfaces.IRepositories;
-using Vubids.Domain.Interfaces.IServices;
-using VubidsRespository;
-using VubidsRespository.DataContext;
-using VubidsRespository.Repos;
-using VubidsServices;
+using JetSend.Core.Utilities.Services.TokenService;
+using JetSend.Domain.Entities.Auths;
+using JetSend.Domain.Interfaces.IRepositories;
+using JetSend.Domain.Interfaces.IServices;
+using JetSend.Respository;
+using JetSend.Respository.DataContext;
+using JetSend.Respository.Repos;
+using JetSendsServices;
+using CloudinaryDotNet;
 
-namespace VubUsersAPI.Extensions
+namespace JetSend.API.Extensions
 {
     public static class ServiceExtensions
     {
@@ -31,15 +32,16 @@ namespace VubUsersAPI.Extensions
             services.AddIdentityService(config);
             return services;
         }
-
-        static void AddIdentityService(this IServiceCollection services, IConfiguration configuration)
+         static void AddIdentityService(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<VubidDbContext>(opt =>
+            // 🔌 Configure Entity Framework + SQL Server
+            services.AddDbContext<JetSendDbContext>(opt =>
             {
-                opt.UseSqlServer(configuration.GetConnectionString("vubidcon")!);
-
+                opt.UseSqlServer(configuration.GetConnectionString("JetSendcon")!);
             });
-            services.AddIdentity<ApplicationUsers, IdentityRole>(options =>
+
+            // 🔐 Configure Identity with custom ApplicationUsers and ApplicationUsersRole
+            services.AddIdentity<ApplicationUsers, ApplicationUsersRole>(options =>
             {
                 options.Password.RequireDigit = false;
                 options.Password.RequiredLength = 6;
@@ -49,22 +51,38 @@ namespace VubUsersAPI.Extensions
                 options.SignIn.RequireConfirmedEmail = false;
                 options.SignIn.RequireConfirmedPhoneNumber = false;
             })
-            .AddDefaultTokenProviders()
-            .AddEntityFrameworkStores<VubidDbContext>();
-            // services.RegisterSwagger();
+            .AddEntityFrameworkStores<JetSendDbContext>()
+            .AddDefaultTokenProviders();
+
+            // ⚙️ Bind app settings
             services.Configure<AppSettings>(configuration.GetSection("appSettings"));
             services.Configure<PaymentConfig>(configuration.GetSection("PaymentConfig"));
+
             var appSettings = configuration.Get<AppSettings>();
-            var jt = configuration.GetSection("appSettings")["SendGridKey"].ToString();
-            services.AddSendGrid(options => options.ApiKey = jt);
+            var sendGridKey = configuration["appSettings:SendGridKey"];
+            var CloudinaryUsername = configuration["appSettings:CloudinaryUsername"];
+            var CloudinaryApiKey = configuration["appSettings:CloudinaryApiKey"];
+            var CloudinarySecreteKey = configuration["appSettings:CloudinarySecreteKey"];
+            services.AddSendGrid(options => options.ApiKey = sendGridKey);
+          
+            var account = new Account(
+                CloudinaryUsername,
+                CloudinaryApiKey,
+                CloudinarySecreteKey
+            );
 
+            var cloudinary = new CloudinaryDotNet.Cloudinary(account)
+            {
+                Api = { Secure = true }
+            };
 
+            services.AddSingleton(cloudinary);
+            // 🔒 Configure JWT Authentication
             services.AddAuthentication(x =>
             {
                 x.DefaultScheme = IdentityConstants.ApplicationScheme;
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(x =>
             {
@@ -73,7 +91,9 @@ namespace VubUsersAPI.Extensions
                 x.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("appSettings")["JwtKey"])),
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(configuration["appSettings:JwtKey"] ?? string.Empty)
+                    ),
                     ValidateIssuer = false,
                     ValidateAudience = false
                 };
@@ -81,7 +101,7 @@ namespace VubUsersAPI.Extensions
                 {
                     OnAuthenticationFailed = context =>
                     {
-                        if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+                        if (context.Exception is SecurityTokenExpiredException)
                         {
                             context.Response.Headers.Append("Token-Expired", "true");
                         }
@@ -91,13 +111,72 @@ namespace VubUsersAPI.Extensions
             });
         }
 
+        //static void AddIdentityService(this IServiceCollection services, IConfiguration configuration)
+        //{
+        //    services.AddDbContext<JetSendDbContext>(opt =>
+        //    {
+        //        opt.UseSqlServer(configuration.GetConnectionString("JetSendcon")!);
+
+        //    });
+        //    services.AddIdentity<ApplicationUsers, IdentityRole>(options =>
+        //    {
+        //        options.Password.RequireDigit = false;
+        //        options.Password.RequiredLength = 6;
+        //        options.Password.RequireNonAlphanumeric = false;
+        //        options.Password.RequireUppercase = false;
+        //        options.Password.RequireLowercase = false;
+        //        options.SignIn.RequireConfirmedEmail = false;
+        //        options.SignIn.RequireConfirmedPhoneNumber = false;
+        //    })
+        //    .AddDefaultTokenProviders()
+        //    .AddEntityFrameworkStores<JetSendDbContext>();
+        //    // services.RegisterSwagger();
+        //    services.Configure<AppSettings>(configuration.GetSection("appSettings"));
+        //    services.Configure<PaymentConfig>(configuration.GetSection("PaymentConfig"));
+        //    var appSettings = configuration.Get<AppSettings>();
+        //    var jt = configuration.GetSection("appSettings")["SendGridKey"].ToString();
+        //    services.AddSendGrid(options => options.ApiKey = jt);
+
+
+        //    services.AddAuthentication(x =>
+        //    {
+        //        x.DefaultScheme = IdentityConstants.ApplicationScheme;
+        //        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        //        x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        //        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        //    })
+        //    .AddJwtBearer(x =>
+        //    {
+        //        x.RequireHttpsMetadata = false;
+        //        x.SaveToken = true;
+        //        x.TokenValidationParameters = new TokenValidationParameters
+        //        {
+        //            ValidateIssuerSigningKey = true,
+        //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("appSettings")["JwtKey"])),
+        //            ValidateIssuer = false,
+        //            ValidateAudience = false
+        //        };
+        //        x.Events = new JwtBearerEvents
+        //        {
+        //            OnAuthenticationFailed = context =>
+        //            {
+        //                if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+        //                {
+        //                    context.Response.Headers.Append("Token-Expired", "true");
+        //                }
+        //                return Task.CompletedTask;
+        //            }
+        //        };
+        //    });
+        //}
+
         public static IServiceCollection RegisterSwagger(this IServiceCollection services)
         {
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "VubidsAPI",
+                    Title = "JetSendsAPI",
                     Version = "1.0"
                 });
 
@@ -138,7 +217,7 @@ namespace VubUsersAPI.Extensions
             services.AddScoped<IManageChatMessageRepo, ManageChatMessageRepo>();
             services.AddScoped<IManageCompanyRepo, ManageCompanyRepo>();
             services.AddScoped<IManageDeliveryPickupRepo, ManageDeliveryPickupRepo>();
-            services.AddScoped<IManageItemsRepo, ManageItemsRepo>();
+            services.AddScoped<IManageGeneralSetUpRepo, ManageGeneralSetUpRepo>();
             services.AddScoped<IManagePackageRepo, ManagePackageRepo>();
             services.AddScoped<IManagePaymentRepo, ManagePaymentRepo>();
             services.AddScoped<IManageQuoteRepo, ManageQuoteRepo>();
@@ -152,7 +231,7 @@ namespace VubUsersAPI.Extensions
             //Services
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IGenerateTokenService, GenerateTokenService>();
-            services.AddScoped<IItemService, ItemService>();
+            services.AddScoped<IManageGeneralSetUpService, ManageGeneralSetUpService>();
             services.AddScoped<IPackageService, PackageService>();
             services.AddScoped<IPaymentService, PaymentService>();
             services.AddScoped<IQuoteService, QuoteService>();

@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Vubids.Core.Infranstructure.Common;
-using Vubids.Core.Infranstructure.Common.Enums;
+using JetSend.Core.Infranstructure.Common;
+using JetSend.Core.Infranstructure.Common.Enums;
 
-namespace VubUsersAPI.Controllers
+namespace JetSend.API.Controllers
 {
     [Route("app/v{version:apiVersion}/[controller]")]
     [Authorize(AuthenticationSchemes = "Bearer")]

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Vubids.Domain.Entities
+namespace JetSend.Domain.Entities
 {
     public class Customer : BaseEntity
     {

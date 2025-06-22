@@ -1,9 +1,9 @@
-﻿using Vubids.Core.Infranstructure.Common;
-using Vubids.Domain.Dtos.RequestDtos;
-using Vubids.Domain.Dtos.RequestDtos.Account;
-using Vubids.Domain.Dtos.ResponseDtos.Account;
+﻿using JetSend.Core.Infranstructure.Common;
+using JetSend.Domain.Dtos.RequestDtos;
+using JetSend.Domain.Dtos.RequestDtos.Account;
+using JetSend.Domain.Dtos.ResponseDtos.Account;
 
-namespace Vubids.Domain.Interfaces.IServices
+namespace JetSend.Domain.Interfaces.IServices
 {
     public interface IAuthService
     {
@@ -11,7 +11,7 @@ namespace Vubids.Domain.Interfaces.IServices
         Task<ApiResponse<CustomerProfileResponse>> GetCustometProfile();
         Task<ApiResponse<CustomerLoginResponse>> LoginUser(LoginRequest request);
         Task<ApiResponse<string>> CreateCustomer(CreateCustomerRequest request, CancellationToken cancellationToken);
-       // Task<ApiResponse<string>> CreateCustomerCompany(CreateCustomerCompanyRequest request, CancellationToken cancellationToken);
+        Task<ApiResponse<string>> CreateAgent(CreateAgentRequest request, CancellationToken cancellationToken);
         Task<ApiResponse> ChangePassword(ChangePasswordRequest request, string email);
         Task<ApiResponse> ResetPassword(ResetPasswordRequest request);
         Task<ApiResponse<string>> ForgotPassword();

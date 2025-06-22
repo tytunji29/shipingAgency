@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vubids.Domain.Dtos.RequestDtos
+namespace JetSend.Domain.Dtos.RequestDtos
 {
     public class SendPackageRequest
     {

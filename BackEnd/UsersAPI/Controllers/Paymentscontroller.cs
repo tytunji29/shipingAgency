@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using Vubids.Core.Infranstructure.Common;
-using Vubids.Domain.Dtos.RequestDtos;
-using Vubids.Domain.Dtos.ResponseDtos;
-using Vubids.Domain.Interfaces.IServices;
+using JetSend.Core.Infranstructure.Common;
+using JetSend.Domain.Dtos.RequestDtos;
+using JetSend.Domain.Dtos.ResponseDtos;
+using JetSend.Domain.Interfaces.IServices;
 
-namespace VubUsersAPI.Controllers
+namespace JetSend.API.Controllers
 {
     [ApiController]
     public class Paymentscontroller : APIBaseController

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VubUsersAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e73e3d57c770e9120c4547f58334aaf474ac035d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43773a037c7be831796315660fe04221782e4caf")]
 [assembly: System.Reflection.AssemblyProductAttribute("VubUsersAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VubUsersAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

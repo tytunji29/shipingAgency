@@ -5,20 +5,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VubidsRespository.DataContext;
+using JetSend.Respository.DataContext;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Vubids.Domain.Entities.Auths;
+using JetSend.Domain.Entities.Auths;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using VubidsRespository;
-using Vubids.Domain.Interfaces.IRepositories;
-using VubidsRespository.Repos;
+using JetSend.Respository;
+using JetSend.Domain.Interfaces.IRepositories;
+using JetSend.Respository.Repos;
 using MeetTech.Infranstructure.Model.Configuration;
 using System.Security.Claims;
 using System.Security.Principal;
 
-namespace VubidsServices.Extensions
+namespace JetSendsServices.Extensions
 {
     //public static class ServiceExtensions
     //{
@@ -33,9 +33,9 @@ namespace VubidsServices.Extensions
     //        var appSettings = configuration.Get<AppSettings>();
 
     //        services.Configure<AppSettings>(configuration.GetSection("AppSettings"));
-    //        services.AddDbContext<VubidDbContext>(opt =>
+    //        services.AddDbContext<JetSendDbContext>(opt =>
     //        {
-    //            opt.UseSqlServer(configuration.GetConnectionString("vubidcon"));
+    //            opt.UseSqlServer(configuration.GetConnectionString("JetSendcon"));
 
     //        });
     //        services.AddIdentity<ApplicationUsers, IdentityRole>(options =>
@@ -50,7 +50,7 @@ namespace VubidsServices.Extensions
     //        })
     //          .AddDefaultTokenProviders()
     //        //  .AddRoles<IdentityRole>()
-    //         .AddEntityFrameworkStores<VubidDbContext>();
+    //         .AddEntityFrameworkStores<JetSendDbContext>();
     //        var key = Encoding.ASCII.GetBytes(appSettings.JwtKey!);
     //        services.AddAuthentication(options =>
     //        {

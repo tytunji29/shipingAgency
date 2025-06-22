@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
-using Vubids.Domain.Dtos.RequestDtos.Account;
+using JetSend.Domain.Dtos.RequestDtos.Account;
 
-namespace Vubids.Domain.Interfaces.IServices
+namespace JetSend.Domain.Interfaces.IServices
 {
     public interface IGenerateTokenService
     {

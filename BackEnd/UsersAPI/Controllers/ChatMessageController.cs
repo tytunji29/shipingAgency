@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using Vubids.Core.Infranstructure.Common;
-using Vubids.Domain.Entities;
-using Vubids.Domain.Interfaces.IServices;
+using JetSend.Core.Infranstructure.Common;
+using JetSend.Domain.Entities;
+using JetSend.Domain.Interfaces.IServices;
 
-namespace VubUsersAPI.Controllers
+namespace JetSend.API.Controllers
 {
     [ApiController]
     public class ChatMessageController : APIBaseController

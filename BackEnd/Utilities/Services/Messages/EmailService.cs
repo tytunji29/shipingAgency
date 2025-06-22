@@ -13,7 +13,7 @@ using System.Linq;
 using MeetTech.Core.Utilities.Extensions;
 using MeetTech.Core.Utilities.Statics;
 using Microsoft.Extensions.Options;
-using Vubids.Domain.Exceptions;
+using JetSend.Domain.Exceptions;
 using SendGrid.Helpers.Mail;
 using SendGrid;
 using UtilitiesServices.Statics;

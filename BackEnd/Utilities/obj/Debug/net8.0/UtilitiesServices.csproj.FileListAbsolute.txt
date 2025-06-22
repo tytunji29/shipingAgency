@@ -55,10 +55,10 @@ C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\Utilities\obj\Debug\net8.0\ref\Ut
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\bin\Debug\net8.0\UtilitiesServices.deps.json
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\bin\Debug\net8.0\UtilitiesServices.dll
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\bin\Debug\net8.0\UtilitiesServices.pdb
-C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\bin\Debug\net8.0\Vubids.Domain.dll
-C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\bin\Debug\net8.0\VubidsRespository.dll
-C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\bin\Debug\net8.0\Vubids.Domain.pdb
-C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\bin\Debug\net8.0\VubidsRespository.pdb
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\bin\Debug\net8.0\JetSend.Domain.dll
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\bin\Debug\net8.0\JetSend.Respository.dll
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\bin\Debug\net8.0\JetSend.Domain.pdb
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\bin\Debug\net8.0\JetSend.Respository.pdb
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\obj\Debug\net8.0\UtilitiesServices.csproj.AssemblyReference.cache
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\obj\Debug\net8.0\UtilitiesServices.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\Utilities\obj\Debug\net8.0\UtilitiesServices.AssemblyInfoInputs.cache

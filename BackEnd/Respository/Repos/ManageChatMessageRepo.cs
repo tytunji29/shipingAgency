@@ -4,18 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vubids.Domain.Entities;
-using Vubids.Domain.Exceptions;
-using Vubids.Domain.Interfaces.IRepositories;
-using VubidsRespository.DataContext;
+using JetSend.Domain.Entities;
+using JetSend.Domain.Exceptions;
+using JetSend.Domain.Interfaces.IRepositories;
+using JetSend.Respository.DataContext;
 
-namespace VubidsRespository.Repos
+namespace JetSend.Respository.Repos
 {
     public class ManageChatMessageRepo : IManageChatMessageRepo
     {
-        private readonly VubidDbContext _db;
+        private readonly JetSendDbContext _db;
 
-        public ManageChatMessageRepo(VubidDbContext db)
+        public ManageChatMessageRepo(JetSendDbContext db)
         {
             _db = db;
         }

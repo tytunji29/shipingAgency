@@ -1,6 +1,0 @@
-C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\UsersAPI\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\UsersAPI\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\UsersAPI\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\UsersAPI\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\UsersAPI\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\HP Elitebook 840 G2\Desktop\VubidsApi\UsersAPI\obj\Debug\net8.0\staticwebassets.build.json

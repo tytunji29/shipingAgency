@@ -1,4 +1,4 @@
-﻿namespace Vubids.Domain.Dtos.RequestDtos
+﻿namespace JetSend.Domain.Dtos.RequestDtos
 {
     public class AddCustomerCardRequestDto
     {

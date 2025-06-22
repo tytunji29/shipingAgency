@@ -1,4 +1,4 @@
-﻿namespace Vubids.Domain.Entities
+﻿namespace JetSend.Domain.Entities
 {
     public class Company : BaseEntity
     {

@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Vubids.Domain.Entities;
-using Vubids.Domain.Interfaces.IRepositories;
-using VubidsRespository.DataContext;
+using JetSend.Domain.Entities;
+using JetSend.Domain.Interfaces.IRepositories;
+using JetSend.Respository.DataContext;
 
-namespace VubidsRespository.Repos
+namespace JetSend.Respository.Repos
 {
     public class ManageSupportRepo : IManageSupportRepo
     {
-        private readonly VubidDbContext _db;
-        public ManageSupportRepo(VubidDbContext db)
+        private readonly JetSendDbContext _db;
+        public ManageSupportRepo(JetSendDbContext db)
         {
             _db = db;
         }

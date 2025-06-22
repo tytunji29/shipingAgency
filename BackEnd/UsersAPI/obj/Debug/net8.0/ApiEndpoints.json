@@ -1,6 +1,122 @@
 [
   {
-    "ContainingType": "VubUsersAPI.Controllers.AuthController",
+    "ContainingType": "JetSend.API.Controllers.AuthController",
+    "Method": "AgentSignUp",
+    "RelativePath": "app/v{version}/Auth/agent-signUp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "NationalIdentityNumber",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegionState",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegionLgaId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "VehicleTypeId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DriverLicenseImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "PlateNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BankName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AccountName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AccountNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.AuthController",
     "Method": "ChangePassword",
     "RelativePath": "app/v{version}/Auth/change-password",
     "HttpMethod": "POST",
@@ -9,7 +125,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Vubids.Domain.Dtos.RequestDtos.Account.ChangePasswordRequest",
+        "Type": "JetSend.Domain.Dtos.RequestDtos.Account.ChangePasswordRequest",
         "IsRequired": true
       },
       {
@@ -20,7 +136,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -31,38 +147,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.AuthController",
-    "Method": "CorporateSignUp",
-    "RelativePath": "app/v{version}/Auth/corporate-signUp",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Vubids.Domain.Dtos.RequestDtos.Account.CreateCustomerCompanyRequest",
-        "IsRequired": true
-      },
-      {
-        "Name": "version",
-        "Type": "",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "VubUsersAPI.Controllers.AuthController",
+    "ContainingType": "JetSend.API.Controllers.AuthController",
     "Method": "SignUp",
     "RelativePath": "app/v{version}/Auth/customer-signUp",
     "HttpMethod": "POST",
@@ -70,9 +155,49 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "Vubids.Domain.Dtos.RequestDtos.Account.CreateCustomerRequest",
-        "IsRequired": true
+        "Name": "Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.String",
+        "IsRequired": false
       },
       {
         "Name": "version",
@@ -82,7 +207,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -93,7 +218,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.AuthController",
+    "ContainingType": "JetSend.API.Controllers.AuthController",
     "Method": "Forgot",
     "RelativePath": "app/v{version}/Auth/forgot-password",
     "HttpMethod": "POST",
@@ -108,7 +233,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -119,7 +244,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.AuthController",
+    "ContainingType": "JetSend.API.Controllers.AuthController",
     "Method": "GetProfile",
     "RelativePath": "app/v{version}/Auth/get-customer-profile",
     "HttpMethod": "GET",
@@ -134,7 +259,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[Vubids.Domain.Dtos.ResponseDtos.Account.CustomerProfileResponse, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[JetSend.Domain.Dtos.ResponseDtos.Account.CustomerProfileResponse, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -145,7 +270,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.AuthController",
+    "ContainingType": "JetSend.API.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "app/v{version}/Auth/login",
     "HttpMethod": "POST",
@@ -154,7 +279,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Vubids.Domain.Dtos.RequestDtos.Account.LoginRequest",
+        "Type": "JetSend.Domain.Dtos.RequestDtos.Account.LoginRequest",
         "IsRequired": true
       },
       {
@@ -165,7 +290,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[Vubids.Domain.Dtos.ResponseDtos.Account.CustomerLoginResponse, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[JetSend.Domain.Dtos.ResponseDtos.Account.CustomerLoginResponse, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -176,7 +301,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.AuthController",
+    "ContainingType": "JetSend.API.Controllers.AuthController",
     "Method": "ResetPassword",
     "RelativePath": "app/v{version}/Auth/reset-password",
     "HttpMethod": "POST",
@@ -185,7 +310,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Vubids.Domain.Dtos.RequestDtos.Account.ResetPasswordRequest",
+        "Type": "JetSend.Domain.Dtos.RequestDtos.Account.ResetPasswordRequest",
         "IsRequired": true
       },
       {
@@ -196,7 +321,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -207,7 +332,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.AuthController",
+    "ContainingType": "JetSend.API.Controllers.AuthController",
     "Method": "UpdateProfile",
     "RelativePath": "app/v{version}/Auth/update-profile",
     "HttpMethod": "PATCH",
@@ -216,7 +341,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Vubids.Domain.Dtos.RequestDtos.Account.UpdateCustomerRequest",
+        "Type": "JetSend.Domain.Dtos.RequestDtos.Account.UpdateCustomerRequest",
         "IsRequired": true
       },
       {
@@ -227,7 +352,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -238,7 +363,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.ChatMessageController",
+    "ContainingType": "JetSend.API.Controllers.ChatMessageController",
     "Method": "ArchiveMessage",
     "RelativePath": "app/v{version}/ChatMessage/archive/{messageId}",
     "HttpMethod": "POST",
@@ -258,7 +383,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -269,7 +394,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.ChatMessageController",
+    "ContainingType": "JetSend.API.Controllers.ChatMessageController",
     "Method": "GetArchiveMessage",
     "RelativePath": "app/v{version}/ChatMessage/archived/{userId}",
     "HttpMethod": "POST",
@@ -294,7 +419,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[Vubids.Domain.Entities.ChatMessage, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Entities.ChatMessage, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -305,7 +430,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.ChatMessageController",
+    "ContainingType": "JetSend.API.Controllers.ChatMessageController",
     "Method": "GetChatHistory",
     "RelativePath": "app/v{version}/ChatMessage/history/{senderId}/{receiverId}",
     "HttpMethod": "GET",
@@ -330,7 +455,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[Vubids.Domain.Entities.ChatMessage, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Entities.ChatMessage, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -341,7 +466,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.ChatMessageController",
+    "ContainingType": "JetSend.API.Controllers.ChatMessageController",
     "Method": "Search",
     "RelativePath": "app/v{version}/ChatMessage/search/{userId}",
     "HttpMethod": "GET",
@@ -366,7 +491,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[Vubids.Domain.Entities.ChatMessage, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Entities.ChatMessage, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -377,7 +502,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.ChatMessageController",
+    "ContainingType": "JetSend.API.Controllers.ChatMessageController",
     "Method": "SendMessage",
     "RelativePath": "app/v{version}/ChatMessage/send",
     "HttpMethod": "POST",
@@ -386,7 +511,7 @@
     "Parameters": [
       {
         "Name": "message",
-        "Type": "Vubids.Domain.Entities.ChatMessage",
+        "Type": "JetSend.Domain.Entities.ChatMessage",
         "IsRequired": true
       },
       {
@@ -397,7 +522,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -408,7 +533,250 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.ItemsController",
+    "ContainingType": "JetSend.API.Controllers.GeneralSetupController",
+    "Method": "AddItem",
+    "RelativePath": "app/v{version}/GeneralSetup/add-item-category",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.GeneralSetupController",
+    "Method": "AddItemType",
+    "RelativePath": "app/v{version}/GeneralSetup/add-item-type",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "categoryId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.GeneralSetupController",
+    "Method": "AddRegionLga",
+    "RelativePath": "app/v{version}/GeneralSetup/add-region-lga",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "stateId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.GeneralSetupController",
+    "Method": "AddRegionState",
+    "RelativePath": "app/v{version}/GeneralSetup/add-region-state",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.GeneralSetupController",
+    "Method": "GetAllItems",
+    "RelativePath": "app/v{version}/GeneralSetup/get-all-item-categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Entities.ItemCategory, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.GeneralSetupController",
+    "Method": "GetAllItemTypes",
+    "RelativePath": "app/v{version}/GeneralSetup/get-all-item-types-by-category-id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Entities.ItemType, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.GeneralSetupController",
+    "Method": "GetAllRegionLgas",
+    "RelativePath": "app/v{version}/GeneralSetup/get-all-region-lga",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Entities.RegionLga, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.GeneralSetupController",
+    "Method": "GetAllRegionStates",
+    "RelativePath": "app/v{version}/GeneralSetup/get-all-region-state",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Entities.RegionState, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.ItemsController",
     "Method": "AddItem",
     "RelativePath": "app/v{version}/Items/add-item-category",
     "HttpMethod": "POST",
@@ -428,7 +796,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -439,7 +807,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.ItemsController",
+    "ContainingType": "JetSend.API.Controllers.ItemsController",
     "Method": "AddItemType",
     "RelativePath": "app/v{version}/Items/add-item-type",
     "HttpMethod": "POST",
@@ -464,7 +832,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -475,7 +843,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.ItemsController",
+    "ContainingType": "JetSend.API.Controllers.ItemsController",
     "Method": "GetAllItems",
     "RelativePath": "app/v{version}/Items/get-all-item-categories",
     "HttpMethod": "GET",
@@ -490,7 +858,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[Vubids.Domain.Entities.ItemCategory, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Entities.ItemCategory, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -501,7 +869,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.ItemsController",
+    "ContainingType": "JetSend.API.Controllers.ItemsController",
     "Method": "GetAllItemTypes",
     "RelativePath": "app/v{version}/Items/get-all-item-types-by-category-id",
     "HttpMethod": "GET",
@@ -521,7 +889,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[Vubids.Domain.Entities.ItemType, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Entities.ItemType, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -532,7 +900,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.PackagesController",
+    "ContainingType": "JetSend.API.Controllers.PackagesController",
     "Method": "GetActive",
     "RelativePath": "app/v{version}/Packages/get-active-package",
     "HttpMethod": "GET",
@@ -547,7 +915,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -558,7 +926,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.PackagesController",
+    "ContainingType": "JetSend.API.Controllers.PackagesController",
     "Method": "GetPending",
     "RelativePath": "app/v{version}/Packages/get-pending-package",
     "HttpMethod": "GET",
@@ -573,7 +941,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -584,7 +952,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.PackagesController",
+    "ContainingType": "JetSend.API.Controllers.PackagesController",
     "Method": "SendPackage",
     "RelativePath": "app/v{version}/Packages/send-package",
     "HttpMethod": "POST",
@@ -593,7 +961,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Vubids.Domain.Dtos.RequestDtos.SendPackageRequest",
+        "Type": "JetSend.Domain.Dtos.RequestDtos.SendPackageRequest",
         "IsRequired": true
       },
       {
@@ -604,7 +972,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -615,7 +983,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.Paymentscontroller",
+    "ContainingType": "JetSend.API.Controllers.Paymentscontroller",
     "Method": "AddPayment",
     "RelativePath": "app/v{version}/Payments/add-payment-detaills",
     "HttpMethod": "POST",
@@ -624,7 +992,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Vubids.Domain.Dtos.RequestDtos.AddCustomerCardRequestDto",
+        "Type": "JetSend.Domain.Dtos.RequestDtos.AddCustomerCardRequestDto",
         "IsRequired": true
       },
       {
@@ -635,7 +1003,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -646,7 +1014,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.Paymentscontroller",
+    "ContainingType": "JetSend.API.Controllers.Paymentscontroller",
     "Method": "GetPaymentHistory",
     "RelativePath": "app/v{version}/Payments/get-payment-history/{Id}",
     "HttpMethod": "GET",
@@ -666,7 +1034,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[Vubids.Domain.Dtos.ResponseDtos.PaymentHistoryResponseDto, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[JetSend.Domain.Dtos.ResponseDtos.PaymentHistoryResponseDto, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -677,7 +1045,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.Paymentscontroller",
+    "ContainingType": "JetSend.API.Controllers.Paymentscontroller",
     "Method": "GetPaymentHistory",
     "RelativePath": "app/v{version}/Payments/get-payments-history",
     "HttpMethod": "GET",
@@ -697,7 +1065,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[Vubids.Domain.Dtos.ResponseDtos.PaymentHistoryResponseDto, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Dtos.ResponseDtos.PaymentHistoryResponseDto, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -708,7 +1076,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.QuotesController",
+    "ContainingType": "JetSend.API.Controllers.QuotesController",
     "Method": "AcceptBid",
     "RelativePath": "app/v{version}/Quotes/accept-bid",
     "HttpMethod": "POST",
@@ -728,7 +1096,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -739,7 +1107,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.QuotesController",
+    "ContainingType": "JetSend.API.Controllers.QuotesController",
     "Method": "AddQuote",
     "RelativePath": "app/v{version}/Quotes/add-quotes",
     "HttpMethod": "POST",
@@ -748,7 +1116,7 @@
     "Parameters": [
       {
         "Name": "quouteId",
-        "Type": "Vubids.Domain.Entities.Quotes",
+        "Type": "JetSend.Domain.Entities.Quotes",
         "IsRequired": true
       },
       {
@@ -759,7 +1127,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -770,7 +1138,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.QuotesController",
+    "ContainingType": "JetSend.API.Controllers.QuotesController",
     "Method": "GetAll",
     "RelativePath": "app/v{version}/Quotes/get-all-quotes",
     "HttpMethod": "GET",
@@ -790,7 +1158,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[Vubids.Domain.Dtos.ResponseDtos.QuoteResponseDto, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Dtos.ResponseDtos.QuoteResponseDto, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -801,7 +1169,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.QuotesController",
+    "ContainingType": "JetSend.API.Controllers.QuotesController",
     "Method": "MakeBid",
     "RelativePath": "app/v{version}/Quotes/make-bid",
     "HttpMethod": "POST",
@@ -810,7 +1178,7 @@
     "Parameters": [
       {
         "Name": "quouteId",
-        "Type": "Vubids.Domain.Entities.QuotesFm",
+        "Type": "JetSend.Domain.Entities.QuotesFm",
         "IsRequired": true
       },
       {
@@ -821,7 +1189,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -832,7 +1200,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.ShipmentsController",
+    "ContainingType": "JetSend.API.Controllers.ShipmentsController",
     "Method": "CreateShipment",
     "RelativePath": "app/v{version}/Shipments/create-shipment",
     "HttpMethod": "POST",
@@ -841,7 +1209,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Vubids.Domain.Dtos.RequestDtos.CreateShipmentRequestDto",
+        "Type": "JetSend.Domain.Dtos.RequestDtos.CreateShipmentRequestDto",
         "IsRequired": true
       },
       {
@@ -852,7 +1220,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -863,7 +1231,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.ShipmentsController",
+    "ContainingType": "JetSend.API.Controllers.ShipmentsController",
     "Method": "GetAll",
     "RelativePath": "app/v{version}/Shipments/get-all-shipment",
     "HttpMethod": "GET",
@@ -883,7 +1251,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[Vubids.Domain.Dtos.ResponseDtos.ShipmentResponseDto, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Dtos.ResponseDtos.ShipmentResponseDto, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -894,7 +1262,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.ShipmentsController",
+    "ContainingType": "JetSend.API.Controllers.ShipmentsController",
     "Method": "GetAllLanding",
     "RelativePath": "app/v{version}/Shipments/get-all-shipment-landing",
     "HttpMethod": "GET",
@@ -909,7 +1277,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[Vubids.Domain.Dtos.ResponseDtos.ShipmentResponseDto, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Dtos.ResponseDtos.ShipmentResponseDto, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -920,7 +1288,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.SupportsController",
+    "ContainingType": "JetSend.API.Controllers.SupportsController",
     "Method": "GetAll",
     "RelativePath": "app/v{version}/Supports/get-all-transporters",
     "HttpMethod": "GET",
@@ -935,7 +1303,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[Vubids.Domain.Dtos.ResponseDtos.SupportResponseDto, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Dtos.ResponseDtos.SupportResponseDto, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -946,7 +1314,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.SupportsController",
+    "ContainingType": "JetSend.API.Controllers.SupportsController",
     "Method": "AddTicket",
     "RelativePath": "app/v{version}/Supports/submit-ticket",
     "HttpMethod": "POST",
@@ -955,7 +1323,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Vubids.Domain.Dtos.RequestDtos.CreateTicketRequestDto",
+        "Type": "JetSend.Domain.Dtos.RequestDtos.CreateTicketRequestDto",
         "IsRequired": true
       },
       {
@@ -966,7 +1334,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -977,7 +1345,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.TransportersController",
+    "ContainingType": "JetSend.API.Controllers.TransportersController",
     "Method": "Create",
     "RelativePath": "app/v{version}/Transporters/add-transporter",
     "HttpMethod": "POST",
@@ -986,7 +1354,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Vubids.Domain.Dtos.RequestDtos.CreateTransporterRequestDto",
+        "Type": "JetSend.Domain.Dtos.RequestDtos.CreateTransporterRequestDto",
         "IsRequired": true
       },
       {
@@ -997,7 +1365,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1008,7 +1376,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.TransportersController",
+    "ContainingType": "JetSend.API.Controllers.TransportersController",
     "Method": "GetAll",
     "RelativePath": "app/v{version}/Transporters/get-all-transporters",
     "HttpMethod": "GET",
@@ -1023,7 +1391,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[Vubids.Domain.Dtos.ResponseDtos.TransporterResponseDto, Vubids.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Dtos.ResponseDtos.TransporterResponseDto, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1034,7 +1402,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.VehiclesController",
+    "ContainingType": "JetSend.API.Controllers.VehiclesController",
     "Method": "SendPackage",
     "RelativePath": "app/v{version}/Vehicles/add-vehicle",
     "HttpMethod": "POST",
@@ -1054,7 +1422,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1065,7 +1433,7 @@
     ]
   },
   {
-    "ContainingType": "VubUsersAPI.Controllers.VehiclesController",
+    "ContainingType": "JetSend.API.Controllers.VehiclesController",
     "Method": "GetAll",
     "RelativePath": "app/v{version}/Vehicles/get-all-vehicles-types",
     "HttpMethod": "GET",
@@ -1080,7 +1448,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Vubids.Core.Infranstructure.Common.ApiResponse",
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

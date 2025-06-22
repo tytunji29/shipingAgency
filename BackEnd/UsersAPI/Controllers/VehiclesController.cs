@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using Vubids.Core.Infranstructure.Common;
-using Vubids.Domain.Dtos.RequestDtos;
-using Vubids.Domain.Interfaces.IServices;
-using VubidsServices;
+using JetSend.Core.Infranstructure.Common;
+using JetSend.Domain.Dtos.RequestDtos;
+using JetSend.Domain.Interfaces.IServices;
+using JetSendsServices;
 
-namespace VubUsersAPI.Controllers
+namespace JetSend.API.Controllers
 {
     [AllowAnonymous]
     [ApiController]

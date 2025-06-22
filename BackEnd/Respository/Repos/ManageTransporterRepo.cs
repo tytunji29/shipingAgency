@@ -4,17 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vubids.Domain.Dtos.ResponseDtos;
-using Vubids.Domain.Entities;
-using Vubids.Domain.Interfaces.IRepositories;
-using VubidsRespository.DataContext;
+using JetSend.Domain.Dtos.ResponseDtos;
+using JetSend.Domain.Entities;
+using JetSend.Domain.Interfaces.IRepositories;
+using JetSend.Respository.DataContext;
 
-namespace VubidsRespository.Repos
+namespace JetSend.Respository.Repos
 {
     public class ManageTransporterRepo : IManageTransporterRepo
     {
-        private readonly VubidDbContext _db;
-        public ManageTransporterRepo(VubidDbContext db)
+        private readonly JetSendDbContext _db;
+        public ManageTransporterRepo(JetSendDbContext db)
         {
             _db = db;
         }

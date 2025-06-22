@@ -1,7 +1,7 @@
-﻿using Vubids.Core.Infranstructure.Common.Enums;
+﻿using JetSend.Core.Infranstructure.Common.Enums;
 using System.Text.Json.Serialization;
 
-namespace Vubids.Core.Infranstructure.Common
+namespace JetSend.Core.Infranstructure.Common
 {
     public class ApiResponse<TResponse>
     {

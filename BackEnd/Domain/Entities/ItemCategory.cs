@@ -1,5 +1,5 @@
 ﻿
-namespace Vubids.Domain.Entities
+namespace JetSend.Domain.Entities
 {
     public class ItemCategory 
     {

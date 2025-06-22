@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using Vubids.Core.Infranstructure.Common;
-using Vubids.Domain.Dtos.RequestDtos.Account;
-using Vubids.Domain.Dtos.ResponseDtos.Account;
-using Vubids.Domain.Interfaces.IServices;
+using JetSend.Core.Infranstructure.Common;
+using JetSend.Domain.Dtos.RequestDtos.Account;
+using JetSend.Domain.Dtos.ResponseDtos.Account;
+using JetSend.Domain.Interfaces.IServices;
 
-namespace VubUsersAPI.Controllers
+namespace JetSend.API.Controllers
 {
     [ApiController]
     [AllowAnonymous]
@@ -22,16 +22,16 @@ namespace VubUsersAPI.Controllers
 
         [HttpPost("customer-signUp")]
         [ProducesResponseType(typeof(ApiResponse<string>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> SignUp([FromBody] CreateCustomerRequest request, CancellationToken cancellationToken)
+        public async Task<IActionResult> SignUp([FromForm] CreateCustomerRequest request, CancellationToken cancellationToken)
         {
             var response = await _authService.CreateCustomer(request, cancellationToken);
             return ResponseCode(response);
         }
         [HttpPost("agent-signUp")]
         [ProducesResponseType(typeof(ApiResponse<string>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> AgentSignUp([FromBody] CreateCustomerRequest request, CancellationToken cancellationToken)
+        public async Task<IActionResult> AgentSignUp([FromForm] CreateAgentRequest request, CancellationToken cancellationToken)
         {
-            var response = await _authService.CreateCustomer(request, cancellationToken);
+            var response = await _authService.CreateAgent(request, cancellationToken);
             return ResponseCode(response);
         }
 

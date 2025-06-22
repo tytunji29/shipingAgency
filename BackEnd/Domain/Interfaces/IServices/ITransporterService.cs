@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vubids.Core.Infranstructure.Common;
-using Vubids.Domain.Dtos.RequestDtos;
-using Vubids.Domain.Dtos.ResponseDtos;
+using JetSend.Core.Infranstructure.Common;
+using JetSend.Domain.Dtos.RequestDtos;
+using JetSend.Domain.Dtos.ResponseDtos;
 
-namespace Vubids.Domain.Interfaces.IServices
+namespace JetSend.Domain.Interfaces.IServices
 {
     public interface ITransporterService
     {

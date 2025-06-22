@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Vubids.Core.Infranstructure.Common.Enums;
+using JetSend.Core.Infranstructure.Common.Enums;
 
-namespace Vubids.Domain.Entities
+namespace JetSend.Domain.Entities
 {
     public class Agent : BaseEntity
     {
@@ -21,12 +21,15 @@ namespace Vubids.Domain.Entities
         public string? Photo { get; set; }
         [MaxLength(15)]
         public string Gender { get; set; } = default!;
-        [MaxLength(500)]
-        public int RegionState { get; set; } 
-        [MaxLength(500)]
-        public int RegionLgaId { get; set; }
+        [MaxLength(15)]
+        public string DateOfBirth { get; set; } = default!;
+        public string RegionState { get; set; }
+        public string RegionLgaId { get; set; }
+        public string VehicleTypeId { get; set; }
         [MaxLength(50)]
         public string? DriverLicenseImage { get; set; }
+        [MaxLength(500)]
+        public string? HouseAddress { get; set; }
         [MaxLength(50)]
         public string? PlateNumber { get; set; }
         public EntityStatusEnum Status { get; set; }
@@ -42,6 +45,5 @@ namespace Vubids.Domain.Entities
         public string AccountName { get; set; } = default!;
         [MaxLength(50)]
         public string AccountNumber { get; set; } = default!;
-
     }
 }

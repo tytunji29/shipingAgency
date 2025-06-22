@@ -1,12 +1,12 @@
-﻿using Vubids.Core.Infranstructure.Common;
-using Vubids.Core.Infranstructure.Common.Enums;
-using Vubids.Domain.Dtos.RequestDtos;
-using Vubids.Domain.Dtos.ResponseDtos;
-using Vubids.Domain.Entities;
-using Vubids.Domain.Interfaces.IServices;
-using VubidsRespository;
+﻿using JetSend.Core.Infranstructure.Common;
+using JetSend.Core.Infranstructure.Common.Enums;
+using JetSend.Domain.Dtos.RequestDtos;
+using JetSend.Domain.Dtos.ResponseDtos;
+using JetSend.Domain.Entities;
+using JetSend.Domain.Interfaces.IServices;
+using JetSend.Respository;
 
-namespace VubidsServices
+namespace JetSendsServices
 {
     public class SupportService : ISupportService
     {

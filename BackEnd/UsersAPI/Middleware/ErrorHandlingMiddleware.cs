@@ -1,12 +1,12 @@
 ﻿using Serilog;
 using System.Text.Json;
-using Vubids.Core.Infranstructure.Common;
-using Vubids.Core.Infranstructure.Common.Enums;
-using Vubids.Domain.Exceptions;
-using NotFoundException = Vubids.Domain.Exceptions.NotFoundException;
-using ValidationException = Vubids.Domain.Exceptions.ValidationException;
+using JetSend.Core.Infranstructure.Common;
+using JetSend.Core.Infranstructure.Common.Enums;
+using JetSend.Domain.Exceptions;
+using NotFoundException = JetSend.Domain.Exceptions.NotFoundException;
+using ValidationException = JetSend.Domain.Exceptions.ValidationException;
 
-namespace VubUsersAPI.Middleware
+namespace JetSend.API.Middleware
 {
     public class ErrorHandlingMiddleware
     {

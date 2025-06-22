@@ -1,14 +1,14 @@
-﻿using Vubids.Core.Infranstructure.Common;
-using Vubids.Domain.Dtos.ResponseDtos;
-using Vubids.Domain.Interfaces.IServices;
-using VubidsRespository;
-using Vubids.Core.Infranstructure.Common.Enums;
-using Vubids.Domain.Entities;
+﻿using JetSend.Core.Infranstructure.Common;
+using JetSend.Domain.Dtos.ResponseDtos;
+using JetSend.Domain.Interfaces.IServices;
+using JetSend.Respository;
+using JetSend.Core.Infranstructure.Common.Enums;
+using JetSend.Domain.Entities;
 using Twilio.TwiML.Voice;
-using VubidsServices.Extensions;
+using JetSendsServices.Extensions;
 using Microsoft.Extensions.Configuration;
 
-namespace VubidsServices
+namespace JetSendsServices
 {
     public class QuoteService : IQuoteService
     {

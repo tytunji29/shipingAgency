@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Vubids.Domain.Entities.Auths
+namespace JetSend.Domain.Entities.Auths
 {
     public class ApplicationUsers : IdentityUser
     {

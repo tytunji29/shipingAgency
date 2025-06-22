@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Vubids.Domain.csproj" />
-    <ProjectReference Include="..\Respository\VubidsRespository.csproj" />
+    <ProjectReference Include="..\Domain\JetSend.Domain.csproj" />
+    <ProjectReference Include="..\Respository\JetSend.Respository.csproj" />
   </ItemGroup>
 
 </Project>

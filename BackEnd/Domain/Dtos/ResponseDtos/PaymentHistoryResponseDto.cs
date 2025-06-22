@@ -1,4 +1,4 @@
-﻿namespace Vubids.Domain.Dtos.ResponseDtos
+﻿namespace JetSend.Domain.Dtos.ResponseDtos
 {
     public class PaymentHistoryResponseDto
     {

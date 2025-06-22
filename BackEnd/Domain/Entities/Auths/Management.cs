@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vubids.Domain.Entities.Auths
+namespace JetSend.Domain.Entities.Auths
 {
     public class Management : BaseEntity
     {

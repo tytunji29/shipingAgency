@@ -1,19 +1,19 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using Vubids.Domain.Entities;
-using Vubids.Domain.Entities.Auths;
-using Vubids.Domain.Interfaces.IRepositories;
-using VubidsRespository.DataContext;
+using JetSend.Domain.Entities;
+using JetSend.Domain.Entities.Auths;
+using JetSend.Domain.Interfaces.IRepositories;
+using JetSend.Respository.DataContext;
 
-namespace VubidsRespository.Repos
+namespace JetSend.Respository.Repos
 {
    
 
     public class ManageCompanyRepo : IManageCompanyRepo
     {
-        private readonly VubidDbContext _db;
+        private readonly JetSendDbContext _db;
 
-        public ManageCompanyRepo(VubidDbContext db)
+        public ManageCompanyRepo(JetSendDbContext db)
         {
             _db = db;
         }

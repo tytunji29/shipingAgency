@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vubids.Domain.Entities;
+using JetSend.Domain.Entities;
 
-namespace Vubids.Domain.Interfaces.IRepositories
+namespace JetSend.Domain.Interfaces.IRepositories
 {
     public interface IManageSupportRepo
     {

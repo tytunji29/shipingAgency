@@ -1,7 +1,7 @@
-﻿using Vubids.Core.Infranstructure.Common;
-using Vubids.Domain.Entities;
+﻿using JetSend.Core.Infranstructure.Common;
+using JetSend.Domain.Entities;
 
-namespace Vubids.Domain.Interfaces.IServices
+namespace JetSend.Domain.Interfaces.IServices
 {
     public interface IManageChatMessageService
     {

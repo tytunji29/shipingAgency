@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vubids.Domain.Dtos.ResponseDtos.Account
+namespace JetSend.Domain.Dtos.ResponseDtos.Account
 {
     public record CustomerLoginResponse
     {

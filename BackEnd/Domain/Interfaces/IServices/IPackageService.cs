@@ -1,8 +1,8 @@
-﻿using Vubids.Core.Infranstructure.Common;
-using Vubids.Domain.Dtos.RequestDtos;
-using Vubids.Domain.Entities;
+﻿using JetSend.Core.Infranstructure.Common;
+using JetSend.Domain.Dtos.RequestDtos;
+using JetSend.Domain.Entities;
 
-namespace Vubids.Domain.Interfaces.IServices
+namespace JetSend.Domain.Interfaces.IServices
 {
     public interface IPackageService
     {

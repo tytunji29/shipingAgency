@@ -1,6 +1,6 @@
-using VubUsersAPI.Extensions;
+using JetSend.API.Extensions;
 using Microsoft.AspNetCore.Mvc;
-using VubUsersAPI.Middleware;
+using JetSend.API.Middleware;
 using UtilitiesServices;
 using Microsoft.AspNetCore.SignalR;
 

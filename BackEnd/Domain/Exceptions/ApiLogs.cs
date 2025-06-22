@@ -1,6 +1,6 @@
 ﻿using Serilog;
 
-namespace Vubids.Domain.Exceptions
+namespace JetSend.Domain.Exceptions
 {
     public class ApiLogs
     {

@@ -1,20 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Vubids.Domain.Entities;
-using Vubids.Domain.Entities.Auths;
-using Vubids.Domain.Interfaces.IRepositories;
-using VubidsRespository.DataContext;
-using Vubids.Domain.Dtos.RequestDtos.Account;
-using Vubids.Domain.Dtos.ResponseDtos.Account;
-using Vubids.Domain.Dtos.ResponseDtos;
-using Vubids.Core.Infranstructure.Common.Enums;
-using Vubids.Core.Infranstructure.Common;
+using JetSend.Domain.Entities;
+using JetSend.Domain.Entities.Auths;
+using JetSend.Domain.Interfaces.IRepositories;
+using JetSend.Respository.DataContext;
+using JetSend.Domain.Dtos.RequestDtos.Account;
+using JetSend.Domain.Dtos.ResponseDtos.Account;
+using JetSend.Domain.Dtos.ResponseDtos;
+using JetSend.Core.Infranstructure.Common.Enums;
+using JetSend.Core.Infranstructure.Common;
 
-namespace VubidsRespository.Repos
+namespace JetSend.Respository.Repos
 {
     public class ManageUserRepo : IManageUserRepo
     {
-        private readonly VubidDbContext _db;
-        public ManageUserRepo(VubidDbContext db)
+        private readonly JetSendDbContext _db;
+        public ManageUserRepo(JetSendDbContext db)
         {
             _db = db;
         }
@@ -93,6 +93,12 @@ namespace VubidsRespository.Repos
             _db.Customers.Add(entity);
             await _db.SaveChangesAsync();
         }
+        public async Task<long> AddAgent(Agent entity)
+        {
+            _db.Agents.Add(entity);
+            await _db.SaveChangesAsync();
+            return entity.Id;
+        }
 
         public async Task UpdateCustomer(Customer entity)
         {
@@ -100,9 +106,9 @@ namespace VubidsRespository.Repos
             await _db.SaveChangesAsync();
         }
 
-        public async Task AddAgent(Agent entity)
+        public async Task AddAgentBankDetail(AgentBankDetail entity)
         {
-            _db.Agents.Add(entity);
+            _db.AgentBankDetails.Add(entity);
             await _db.SaveChangesAsync();
         }
 

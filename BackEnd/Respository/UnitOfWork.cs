@@ -5,17 +5,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vubids.Domain.Interfaces.IRepositories;
-using VubidsRespository.DataContext;
-using VubidsRespository.Repos;
+using JetSend.Domain.Interfaces.IRepositories;
+using JetSend.Respository.DataContext;
+using JetSend.Respository.Repos;
 
-namespace VubidsRespository
+namespace JetSend.Respository
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly VubidDbContext _db;
+        private readonly JetSendDbContext _db;
 
-        public UnitOfWork(VubidDbContext db)
+        public UnitOfWork(JetSendDbContext db)
         {
             _db = db;
         }
@@ -31,6 +31,7 @@ namespace VubidsRespository
         public IManageSupportRepo ManageSupportRepo => new ManageSupportRepo(_db);
         public IManagePaymentRepo ManagePaymentRepo => new ManagePaymentRepo(_db);
         public IManageChatMessageRepo ManageChatMessageRepo => new ManageChatMessageRepo(_db);
-        public IManageItemsRepo ManageItemsRepo => new ManageItemsRepo(_db);
+        public IManageGeneralSetUpRepo ManageGeneralSetUpRepo => new ManageGeneralSetUpRepo(_db);
+
     }
 }
