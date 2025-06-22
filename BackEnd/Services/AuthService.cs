@@ -170,10 +170,10 @@ namespace JetSendsServices
                 return new ApiResponse<string> { Message = $"Phone number  {request.PhoneNumber} already registered, check and try again later.", StatusCode = StatusEnum.Validation };
             }
             string passport = null;
-            if (request.Photo is not null)
-            {
-                passport = await _uploadFileService.UploadImageAsync(request.Photo, "AgentsDoc");
-            }
+            //if (request.Photo is not null)
+            //{
+            //    passport = await _uploadFileService.UploadImageAsync(request.Photo, "AgentsDoc");
+            //}
             var uCustomer = request.ToUser();
             var createUser = await _userManager.CreateAsync(uCustomer, request.Password);
             //assign role to the user
@@ -195,7 +195,7 @@ namespace JetSendsServices
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 PhoneNumber = request.PhoneNumber,
-                Photo = passport,
+                //Photo = request.,
                 DateOfBirth = request.DateOfBirth
             };
 

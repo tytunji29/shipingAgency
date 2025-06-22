@@ -73,7 +73,7 @@ namespace JetSend.Domain.Dtos.RequestDtos.Account
     }
     public class CreateCustomerRequest
     {
-        public IFormFile? Photo { get; set; }
+       // public IFormFile? Photo { get; set; }
         public string FirstName { get; set; } = default!;
         public string LastName { get; set; } = default!;
         public string Email { get; set; } = default!;

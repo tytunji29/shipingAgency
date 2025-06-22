@@ -22,7 +22,7 @@ namespace JetSend.API.Controllers
 
         [HttpPost("customer-signUp")]
         [ProducesResponseType(typeof(ApiResponse<string>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> SignUp([FromForm] CreateCustomerRequest request, CancellationToken cancellationToken)
+        public async Task<IActionResult> SignUp([FromBody] CreateCustomerRequest request, CancellationToken cancellationToken)
         {
             var response = await _authService.CreateCustomer(request, cancellationToken);
             return ResponseCode(response);
