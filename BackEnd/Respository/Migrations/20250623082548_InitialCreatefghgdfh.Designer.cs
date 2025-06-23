@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JetSend.Respository.Migrations
 {
     [DbContext(typeof(JetSendDbContext))]
-    [Migration("20250622170112_InitialCreateIIhhhssss")]
-    partial class InitialCreateIIhhhssss
+    [Migration("20250623082548_InitialCreatefghgdfh")]
+    partial class InitialCreatefghgdfh
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -103,8 +103,8 @@ namespace JetSend.Respository.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<string>("VehicleTypeId")
                         .IsRequired()

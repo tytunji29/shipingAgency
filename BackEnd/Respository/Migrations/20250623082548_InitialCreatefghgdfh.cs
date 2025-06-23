@@ -6,31 +6,52 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace JetSend.Respository.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialCreatefghgdfh : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "AgentBankDetails",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AgentId = table.Column<long>(type: "bigint", nullable: false),
+                    BankName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    AccountName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    AccountNumber = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    TimeCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TimeUpdated = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AgentBankDetails", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Agents",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(75)", maxLength: 75, nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    NationalIdentityNumber = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Photo = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    NationalIdentityNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Photo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Gender = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
-                    RegionState = table.Column<int>(type: "int", maxLength: 500, nullable: false),
-                    RegionLgaId = table.Column<int>(type: "int", maxLength: 500, nullable: false),
-                    DriverLicenseImage = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    DateOfBirth = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
+                    RegionState = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RegionLgaId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    VehicleTypeId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DriverLicenseImage = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    HouseAddress = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
                     PlateNumber = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false),
-                    ApprovedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ApprovedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TimeCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     TimeUpdated = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -44,6 +65,7 @@ namespace JetSend.Respository.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Discriminator = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
                     Name = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -377,6 +399,33 @@ namespace JetSend.Respository.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "RegionLga",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    StateId = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RegionLga", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RegionState",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RegionState", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Reviews",
                 columns: table => new
                 {
@@ -643,6 +692,9 @@ namespace JetSend.Respository.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "AgentBankDetails");
+
+            migrationBuilder.DropTable(
                 name: "Agents");
 
             migrationBuilder.DropTable(
@@ -704,6 +756,12 @@ namespace JetSend.Respository.Migrations
 
             migrationBuilder.DropTable(
                 name: "Receivers");
+
+            migrationBuilder.DropTable(
+                name: "RegionLga");
+
+            migrationBuilder.DropTable(
+                name: "RegionState");
 
             migrationBuilder.DropTable(
                 name: "Reviews");

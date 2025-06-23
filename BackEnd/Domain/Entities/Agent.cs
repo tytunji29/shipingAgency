@@ -5,7 +5,7 @@ namespace JetSend.Domain.Entities
 {
     public class Agent : BaseEntity
     {
-        [MaxLength(50)]
+        [MaxLength(40)]
         public string UserId { get; set; } = default!;
         [MaxLength(50)]
         public string FirstName { get; set; } = default!;

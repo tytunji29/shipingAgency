@@ -13,7 +13,7 @@ public class JetSendDbContextFactory : IDesignTimeDbContextFactory<JetSendDbCont
     public JetSendDbContext CreateDbContext(string[] args)
     {
         var config = new ConfigurationBuilder()
-            .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../UsersAPI"))
+            .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../API"))
             .AddJsonFile("appsettings.json")
             .Build();
 
