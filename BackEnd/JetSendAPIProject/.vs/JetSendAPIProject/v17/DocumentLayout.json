@@ -1,7 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\VubbidsAPIProject\\",
+  "WorkspaceRootPath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\JetSendAPIProject\\",
   "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4EEFAE96-6655-471A-892A-41C559AE99DB}|..\\UsersAPI\\JetSend.API.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\shipingagency\\backend\\usersapi\\jetsend.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
     {
       "AbsoluteMoniker": "D:0:0:{D0C93082-F54F-4294-AC52-906AA71996E8}|..\\Services\\JetSend.Services.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\shipingagency\\backend\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -88,9 +91,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{D355A690-7B5F-4889-AC01-0CC71FC35D5A}|..\\Utilities\\UtilitiesServices.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\shipingagency\\backend\\utilities\\utilitiesservices.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EEFAE96-6655-471A-892A-41C559AE99DB}|..\\UsersAPI\\JetSend.API.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\shipingagency\\backend\\usersapi\\jetsend.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF7B6396-CCC1-4141-A70B-341E07392797}|..\\Respository\\JetSend.Respository.csproj|c:\\users\\hp elitebook 840 g2\\desktop\\shipingagency\\backend\\respository\\repos\\managevehiclerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -202,7 +202,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 25,
           "Children": [
             {
               "$type": "Document",
@@ -232,13 +232,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "..\\Services\\AuthService.cs",
               "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Services\\AuthService.cs",
               "RelativeToolTip": "..\\Services\\AuthService.cs",
-              "ViewState": "AgIAAI4AAABgl5mZmZkNwMUAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T12:32:14.158Z",
               "IsPinned": true,
@@ -246,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UploadFileService.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Utilities\\Services\\FileService\\UploadFileService.cs",
               "RelativeDocumentMoniker": "..\\Utilities\\Services\\FileService\\UploadFileService.cs",
@@ -259,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ManageUserRepo.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\Repos\\ManageUserRepo.cs",
               "RelativeDocumentMoniker": "..\\Respository\\Repos\\ManageUserRepo.cs",
@@ -348,20 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "..\\UsersAPI\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "..\\UsersAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABQAAAAAMjMzMzPzvxoAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T11:46:33.611Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Dtos\\RequestDtos\\Account\\LoginRequest.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Dtos\\RequestDtos\\Account\\LoginRequest.cs",
@@ -369,12 +356,36 @@
               "RelativeToolTip": "..\\Domain\\Dtos\\RequestDtos\\Account\\LoginRequest.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAD4v0sAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T15:48:20.143Z",
+              "WhenOpened": "2025-06-22T15:48:20.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JetSend.API.csproj",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\JetSend.API.csproj",
+              "RelativeDocumentMoniker": "..\\UsersAPI\\JetSend.API.csproj",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\JetSend.API.csproj",
+              "RelativeToolTip": "..\\UsersAPI\\JetSend.API.csproj",
+              "ViewState": "AgIAAAAAAABAMzMzMzMbwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-22T13:52:21.36Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "..\\UsersAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "..\\UsersAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABQAAAAAMjMzMzPzvxoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T11:46:33.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "IManageUserRepo.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Interfaces\\IRepositories\\IManageUserRepo.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IRepositories\\IManageUserRepo.cs",
@@ -386,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "GeneralSetupController.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\Controllers\\GeneralSetupController.cs",
               "RelativeDocumentMoniker": "..\\UsersAPI\\Controllers\\GeneralSetupController.cs",
@@ -398,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ManageGeneralSetUpRepo.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\Repos\\ManageGeneralSetUpRepo.cs",
               "RelativeDocumentMoniker": "..\\Respository\\Repos\\ManageGeneralSetUpRepo.cs",
@@ -410,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IManageGeneralSetUpRepo.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Interfaces\\IRepositories\\IManageGeneralSetUpRepo.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IRepositories\\IManageGeneralSetUpRepo.cs",
@@ -422,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ManageGeneralSetUpService.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Services\\ManageGeneralSetUpService.cs",
               "RelativeDocumentMoniker": "..\\Services\\ManageGeneralSetUpService.cs",
@@ -434,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "IManageGeneralSetUpService.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Interfaces\\IServices\\IManageGeneralSetUpService.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IServices\\IManageGeneralSetUpService.cs",
@@ -446,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ManagePackageRepo.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\Repos\\ManagePackageRepo.cs",
               "RelativeDocumentMoniker": "..\\Respository\\Repos\\ManagePackageRepo.cs",
@@ -470,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "JetSendDbContext.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\DataContext\\JetSendDbContext.cs",
               "RelativeDocumentMoniker": "..\\Respository\\DataContext\\JetSendDbContext.cs",
@@ -482,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\appsettings.Development.json",
               "RelativeDocumentMoniker": "..\\UsersAPI\\appsettings.Development.json",
@@ -506,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\VubidsApi\\UsersAPI\\appsettings.json",
               "RelativeDocumentMoniker": "..\\..\\..\\VubidsApi\\UsersAPI\\appsettings.json",
@@ -518,7 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "AppSettings.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Models\\Configuration\\AppSettings.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Models\\Configuration\\AppSettings.cs",
@@ -530,7 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "ServiceExtensions.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\Extensions\\ServiceExtensions.cs",
               "RelativeDocumentMoniker": "..\\UsersAPI\\Extensions\\ServiceExtensions.cs",
@@ -542,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "ShipmentService.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Services\\ShipmentService.cs",
               "RelativeDocumentMoniker": "..\\Services\\ShipmentService.cs",
@@ -550,12 +561,11 @@
               "RelativeToolTip": "..\\Services\\ShipmentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T15:50:17.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T15:50:17.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\Program.cs",
               "RelativeDocumentMoniker": "..\\UsersAPI\\Program.cs",
@@ -567,7 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "ServiceExtensions.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Services\\Extensions\\ServiceExtensions.cs",
               "RelativeDocumentMoniker": "..\\Services\\Extensions\\ServiceExtensions.cs",
@@ -579,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "ManageChatMessageService.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Services\\ManageChatMessageService.cs",
               "RelativeDocumentMoniker": "..\\Services\\ManageChatMessageService.cs",
@@ -591,7 +601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "..\\Respository\\UnitOfWork.cs",
@@ -603,7 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "RegionState.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Entities\\RegionState.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\RegionState.cs",
@@ -615,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "ItemType.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Entities\\ItemType.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\ItemType.cs",
@@ -627,7 +637,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "ItemsController.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\Controllers\\ItemsController.cs",
               "RelativeDocumentMoniker": "..\\UsersAPI\\Controllers\\ItemsController.cs",
@@ -651,7 +661,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "StatusEnum.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Domain\\Common\\Enums\\StatusEnum.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Common\\Enums\\StatusEnum.cs",
@@ -675,7 +685,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "20250622140749_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\Migrations\\20250622140749_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\Respository\\Migrations\\20250622140749_InitialCreate.cs",
@@ -687,7 +697,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "ManageDeliveryPickupRepo.cs",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\Repos\\ManageDeliveryPickupRepo.cs",
               "RelativeDocumentMoniker": "..\\Respository\\Repos\\ManageDeliveryPickupRepo.cs",
@@ -699,7 +709,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "UtilitiesServices.csproj",
               "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Utilities\\UtilitiesServices.csproj",
               "RelativeDocumentMoniker": "..\\Utilities\\UtilitiesServices.csproj",
@@ -708,18 +718,6 @@
               "ViewState": "AgIAABIAAABAZmZmZmYkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-06-22T13:52:44.972Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "JetSend.API.csproj",
-              "DocumentMoniker": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\JetSend.API.csproj",
-              "RelativeDocumentMoniker": "..\\UsersAPI\\JetSend.API.csproj",
-              "ToolTip": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\UsersAPI\\JetSend.API.csproj",
-              "RelativeToolTip": "..\\UsersAPI\\JetSend.API.csproj",
-              "ViewState": "AgIAABoAAABAMzMzMzMbwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-22T13:52:21.36Z"
             },
             {
               "$type": "Document",
@@ -850,8 +848,7 @@
               "RelativeToolTip": "..\\..\\..\\VubidsApi\\Services\\ShipmentService.cs",
               "ViewState": "AgIAAFgAAACgmZmZmZkiwG0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T09:15:10.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-13T09:15:10.817Z"
             },
             {
               "$type": "Document",
@@ -863,8 +860,7 @@
               "RelativeToolTip": "..\\..\\..\\VubidsApi\\Services\\Extensions\\WhatsappNotification.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAIwDAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T04:03:07.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T04:03:07.108Z"
             },
             {
               "$type": "Document",
@@ -948,8 +944,7 @@
               "RelativeToolTip": "..\\..\\..\\VubidsApi\\UsersAPI\\Controllers\\QuotesController.cs",
               "ViewState": "AgIAABkAAAAAAAAAAIAwwCYAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T03:12:58.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T03:12:58.975Z"
             },
             {
               "$type": "Document",
