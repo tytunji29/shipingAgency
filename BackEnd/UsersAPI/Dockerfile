@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-COPY ../*.sln .  # Adjust for Render's relative context
+COPY ../*.sln . 
 
 COPY ../JetSend.API/*.csproj ./JetSend.API/
 COPY ../JetSend.Domain/*.csproj ./JetSend.Domain/
