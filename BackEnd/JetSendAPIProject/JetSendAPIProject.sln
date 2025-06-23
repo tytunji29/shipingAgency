@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JetSend.Services", "..\Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JetSend.Respository", "..\Respository\JetSend.Respository.csproj", "{DF7B6396-CCC1-4141-A70B-341E07392797}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JetSend.API", "..\UsersAPI\JetSend.API.csproj", "{4EEFAE96-6655-471A-892A-41C559AE99DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetSend.API", "..\API\JetSend.API.csproj", "{C3DEA67F-4D37-0176-A644-83161EBE9817}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{DF7B6396-CCC1-4141-A70B-341E07392797}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF7B6396-CCC1-4141-A70B-341E07392797}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF7B6396-CCC1-4141-A70B-341E07392797}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4EEFAE96-6655-471A-892A-41C559AE99DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4EEFAE96-6655-471A-892A-41C559AE99DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4EEFAE96-6655-471A-892A-41C559AE99DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4EEFAE96-6655-471A-892A-41C559AE99DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3DEA67F-4D37-0176-A644-83161EBE9817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3DEA67F-4D37-0176-A644-83161EBE9817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3DEA67F-4D37-0176-A644-83161EBE9817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3DEA67F-4D37-0176-A644-83161EBE9817}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
