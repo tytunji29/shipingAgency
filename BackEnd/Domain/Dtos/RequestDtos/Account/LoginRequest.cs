@@ -27,11 +27,11 @@ namespace JetSend.Domain.Dtos.RequestDtos.Account
         public string Address { get; set; } = default!;
         public string DateOfBirth { get; set; } = default!;
         public IFormFile Photo { get; set; }
-        public IFormFile NationalIdentityNumber { get; set; }
+        public string NationalIdentityNumber { get; set; }
         public string RegionState { get; set; }
         public string RegionLgaId { get; set; }
         public string VehicleTypeId { get; set; }
-        public IFormFile DriverLicenseImage { get; set; }
+        public string DriverLicenseImage { get; set; }
         [MaxLength(50)]
         public string? PlateNumber { get; set; }
 

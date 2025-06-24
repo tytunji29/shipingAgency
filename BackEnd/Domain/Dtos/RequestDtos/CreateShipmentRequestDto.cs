@@ -24,6 +24,8 @@ namespace JetSend.Domain.Dtos.RequestDtos
         public int Quantity { get; set; }
         public string ImageUrl { get; set; }
         public string Instructions { get; set; }
+        public string RegionState { get; set; }
+        public string RegionLgaId { get; set; }
     }
 
     public  class DeliveryPickupDetailsRequest

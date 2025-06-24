@@ -39,7 +39,7 @@ namespace JetSend.Respository.Repos
                         join c in _db.Customers on s.UserId equals c.UserId.ToString()
                         select new ShipmentResponsForLandingeDto
                         {
-                            TimeCreated = s.TimeCreated.ToString("f"),
+                            TimeCreated = s.TimeCreated,
                             UserId = s.UserId,
                             ShipmentId = s.ShipmentId,
                             From = d.PickUpAddress,
@@ -67,7 +67,7 @@ namespace JetSend.Respository.Repos
                                 }).ToList()
                         };
 
-            var result = await query.OrderBy(o=>o.TimeCreated).ToListAsync();
+            var result = query.OrderBy(o=>o.TimeCreated);
             return result;
         }
 

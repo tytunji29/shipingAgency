@@ -14,16 +14,15 @@ builder.Services.AddApiVersioning(Options =>
 });
 builder.Services.AddCors(options =>
 {
-
-    options.AddDefaultPolicy(
-
-           builder => builder.WithOrigins("https://localhost:44321", "http://localhost:3000")
-                 .AllowAnyHeader()
-                 .AllowAnyOrigin()
-                 .AllowAnyHeader()
-                 .AllowAnyMethod()
-                 );
+    options.AddPolicy("ProductionPolicy", policy =>
+    {
+        policy.WithOrigins("https://shippingagencyfe.onrender.com")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials(); // If using cookies/auth
+    });
 });
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -42,8 +41,14 @@ app.UseSwagger();
 app.UseSwaggerUI();
 app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseApiVersioning();
+//app.UseRouting();
+//app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+// Middleware pipeline
+app.UseHttpsRedirection();
 app.UseRouting();
-app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+
+// Use CORS policy (AFTER UseRouting, BEFORE UseAuthorization)
+app.UseCors("ProductionPolicy");
 app.Use(async (context, next) =>
 {
     context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
@@ -52,7 +57,7 @@ app.Use(async (context, next) =>
     context.Response.Headers.Add("X-Xss-Protection", "1; mode=block");
     await next();
 });
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseStatusCodePages();
 app.UseAuthorization();

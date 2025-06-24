@@ -71,9 +71,12 @@ namespace JetSendsServices
                 ShipmentId = shipment.Id
             };
             await _unitOfWork.ManageDeliveryPickupRepo.AddPackage(deliveryPickup);
+
+            ////to do get the list of all riders in that location
+
             WhatsappNotification whatsappNotification = new WhatsappNotification(_config);
             whatsappNotification.SendAsync(
-                body: $"Your, New Shipment Created with ID: {shipmentId}. Pickup Address: {deliveryPickup.PickUpAddress}, Delivery Address: {deliveryPickup.DeliveryAddress}",
+                body: $"Your Shipment With The Details Below As Been Created ID: {shipmentId}. Pickup Address: {deliveryPickup.PickUpAddress}, Delivery Address: {deliveryPickup.DeliveryAddress}",
                 url: "http://localhost:3000/",
                 to: loggedInUser.PhoneNumber
             ).GetAwaiter().GetResult();
@@ -115,7 +118,7 @@ namespace JetSendsServices
             else
             {
                 var shipments = await _unitOfWork.ManageShipmentRepo.GetShipmentsLanding();
-                var finalShipments= shipments.Where(o => o.UserId.Trim() == loggedInUser.UserId.Trim()).ToList();
+                var finalShipments = shipments.Where(o => o.UserId.Trim() == loggedInUser.UserId.Trim()).ToList();
                 result = finalShipments.Select(shipment => new ShipmentResponsForLandingeDto
                 {
                     ShipmentId = shipment.ShipmentId,

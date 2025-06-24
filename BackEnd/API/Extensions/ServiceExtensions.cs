@@ -29,10 +29,11 @@ namespace JetSend.API.Extensions
         public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration config)
         {
             RepoServices(services, config);
+            RegisterSwagger(services);
             services.AddIdentityService(config);
             return services;
         }
-         static void AddIdentityService(this IServiceCollection services, IConfiguration configuration)
+        static void AddIdentityService(this IServiceCollection services, IConfiguration configuration)
         {
             // 🔌 Configure Entity Framework + SQL Server
             services.AddDbContext<JetSendDbContext>(opt =>
@@ -64,7 +65,7 @@ namespace JetSend.API.Extensions
             var CloudinaryApiKey = configuration["appSettings:CloudinaryApiKey"];
             var CloudinarySecreteKey = configuration["appSettings:CloudinarySecreteKey"];
             services.AddSendGrid(options => options.ApiKey = sendGridKey);
-          
+
             var account = new Account(
                 CloudinaryUsername,
                 CloudinaryApiKey,
@@ -110,86 +111,32 @@ namespace JetSend.API.Extensions
                 };
             });
         }
-
-        //static void AddIdentityService(this IServiceCollection services, IConfiguration configuration)
-        //{
-        //    services.AddDbContext<JetSendDbContext>(opt =>
-        //    {
-        //        opt.UseSqlServer(configuration.GetConnectionString("JetSendcon")!);
-
-        //    });
-        //    services.AddIdentity<ApplicationUsers, IdentityRole>(options =>
-        //    {
-        //        options.Password.RequireDigit = false;
-        //        options.Password.RequiredLength = 6;
-        //        options.Password.RequireNonAlphanumeric = false;
-        //        options.Password.RequireUppercase = false;
-        //        options.Password.RequireLowercase = false;
-        //        options.SignIn.RequireConfirmedEmail = false;
-        //        options.SignIn.RequireConfirmedPhoneNumber = false;
-        //    })
-        //    .AddDefaultTokenProviders()
-        //    .AddEntityFrameworkStores<JetSendDbContext>();
-        //    // services.RegisterSwagger();
-        //    services.Configure<AppSettings>(configuration.GetSection("appSettings"));
-        //    services.Configure<PaymentConfig>(configuration.GetSection("PaymentConfig"));
-        //    var appSettings = configuration.Get<AppSettings>();
-        //    var jt = configuration.GetSection("appSettings")["SendGridKey"].ToString();
-        //    services.AddSendGrid(options => options.ApiKey = jt);
-
-
-        //    services.AddAuthentication(x =>
-        //    {
-        //        x.DefaultScheme = IdentityConstants.ApplicationScheme;
-        //        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        //        x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        //        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        //    })
-        //    .AddJwtBearer(x =>
-        //    {
-        //        x.RequireHttpsMetadata = false;
-        //        x.SaveToken = true;
-        //        x.TokenValidationParameters = new TokenValidationParameters
-        //        {
-        //            ValidateIssuerSigningKey = true,
-        //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("appSettings")["JwtKey"])),
-        //            ValidateIssuer = false,
-        //            ValidateAudience = false
-        //        };
-        //        x.Events = new JwtBearerEvents
-        //        {
-        //            OnAuthenticationFailed = context =>
-        //            {
-        //                if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
-        //                {
-        //                    context.Response.Headers.Append("Token-Expired", "true");
-        //                }
-        //                return Task.CompletedTask;
-        //            }
-        //        };
-        //    });
-        //}
-
         public static IServiceCollection RegisterSwagger(this IServiceCollection services)
         {
             services.AddSwaggerGen(options =>
             {
+                // Swagger doc info
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Title = "JetSendsAPI",
-                    Version = "1.0"
+                    Version = "v1",
+                    Description = "API documentation for JetSends"
                 });
 
+                // Bearer token authentication
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
-                    In = ParameterLocation.Header,
-                    Description = "Please enter a valid bearer token",
+                    Description = "JWT Authorization header using the Bearer scheme. Example: `Bearer {your token}`",
                     Name = "Authorization",
+                    In = ParameterLocation.Header,
                     Type = SecuritySchemeType.Http,
-                    Scheme = JwtBearerDefaults.AuthenticationScheme
+                    Scheme = "bearer", // Must be "bearer" (lowercase)
+                    BearerFormat = "JWT"
                 });
+
+                // Apply Bearer token globally to all endpoints
                 options.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
+            {
                 {
                     new OpenApiSecurityScheme
                     {
@@ -201,15 +148,20 @@ namespace JetSend.API.Extensions
                         In = ParameterLocation.Header
                     },
                     Array.Empty<string>()
-                }});
+                }
+            });
 
+                // Include XML comments (if enabled in project settings)
                 var xmlFile = $"{Assembly.GetEntryAssembly()?.GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                options.IncludeXmlComments(xmlPath);
+                if (File.Exists(xmlPath))
+                {
+                    options.IncludeXmlComments(xmlPath);
+                }
             });
+
             return services;
         }
-
         static void RepoServices(this IServiceCollection services, IConfiguration config)
         {
             //Repo

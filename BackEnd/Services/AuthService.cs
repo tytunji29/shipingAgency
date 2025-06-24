@@ -77,8 +77,6 @@ namespace JetSendsServices
             }
             //uploads 
             string passport = await _uploadFileService.UploadImageAsync(request.Photo, "AgentsDoc");
-            string nin = await _uploadFileService.UploadImageAsync(request.NationalIdentityNumber, "AgentsDoc");
-            string dli = await _uploadFileService.UploadImageAsync(request.DriverLicenseImage, "AgentsDoc");
             var uCustomer = request.ToUser();
             var createUser = await _userManager.CreateAsync(uCustomer, request.Password);
             //assign role to the user
@@ -99,11 +97,11 @@ namespace JetSendsServices
                 HouseAddress = request.Address,
                 DateOfBirth = request.DateOfBirth,
                 PhoneNumber = request.PhoneNumber,
-                NationalIdentityNumber = nin,
+                NationalIdentityNumber = request.NationalIdentityNumber,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 Photo = passport,
-                DriverLicenseImage = dli,
+                DriverLicenseImage = request.DriverLicenseImage,
                 PlateNumber = request.PlateNumber,
                 Status = (int)EntityStatusEnum.Pending,
                 RegionLgaId = request.RegionLgaId,
@@ -361,7 +359,7 @@ namespace JetSendsServices
                 user.AccessFailedCount = 0;
                 await _userManager.UpdateAsync(user);
 
-                var token = await _generateTokenService.CreateUserToken(user.UserName!, user.Id, "");
+                var token = await _generateTokenService.CreateUserToken(user.UserName!, user.Id, iscus);
                 var cusDet = await _unitOfWork.ManageUserRepo.GetCustomerByEmail(request.Email);
 
                 var response = new CustomerLoginResponse

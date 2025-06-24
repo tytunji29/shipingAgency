@@ -28,7 +28,7 @@ namespace JetSend.Domain.Dtos.ResponseDtos
         public string To { get; set; }
         public string Quote { get; set; }
         public string PickupDate { get; set; }
-        public string TimeCreated { get; set; }
+        public DateTime TimeCreated { get; set; }
         public string DeliveryDate { get; set; }
         public string Status { get; set; }
         public string Customer { get; set; }

@@ -54,7 +54,7 @@
       },
       {
         "Name": "NationalIdentityNumber",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
@@ -74,7 +74,7 @@
       },
       {
         "Name": "DriverLicenseImage",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
