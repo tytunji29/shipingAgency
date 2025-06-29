@@ -11,7 +11,7 @@ namespace JetSend.Domain.Entities
         public string QuoteId { get;set; }
         public string ShipmentId { get;set; }
         public string TransporterId { get; set; }
-        public string Amount { get;set; }
+        public decimal Amount { get;set; }
         public string DateSubmitted { get; set; }
         public string Status { get; set; }
         public  bool IsAccepted { get; set; }

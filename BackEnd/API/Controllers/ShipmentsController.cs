@@ -31,6 +31,13 @@ namespace JetSend.API.Controllers
             var response = await _shipmentService.GetShipments(status);
             return ResponseCode(response);
         }
+        [HttpGet("get-all-shipment-landingpaginated")]
+        [ProducesResponseType(typeof(ApiResponse<IEnumerable<ShipmentResponseDto>>), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> GetAllLanding(int page, int pageSize, int source)
+        {
+            var response = await _shipmentService.GetShipments(page, pageSize,source);
+            return ResponseCode(response);
+        }
         [HttpGet("get-all-shipment-landing")]
         [ProducesResponseType(typeof(ApiResponse<IEnumerable<ShipmentResponseDto>>), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetAllLanding()

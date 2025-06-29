@@ -9,6 +9,7 @@ namespace JetSend.Domain.Interfaces.IRepositories
 {
     public interface IManageUserRepo
     {
+        Task UpdateAgent(Agent entity);
         Task AddCustomer(Customer entity);
         Task<long> AddAgent(Agent entity);
         Task AddAgentBankDetail(AgentBankDetail entity);

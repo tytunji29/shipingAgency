@@ -91,52 +91,150 @@ namespace JetSendsServices
 
         public async Task<ApiResponse<IEnumerable<ShipmentResponsForLandingeDto>>> GetShipments()
         {
-            var result = new List<ShipmentResponsForLandingeDto>();
             var loggedInUser = await _authService.ValidateRequest();
-            if (loggedInUser.IsCompany == "Yes")
-            {
-                var shipments = await _unitOfWork.ManageShipmentRepo.GetShipmentsLanding();
+            var allShipments = await _unitOfWork.ManageShipmentRepo.GetShipmentsLanding();
 
-                var finalShipments = shipments.Where(o => o.Status == "In-Transit").ToList();
-                result = shipments.Select(shipment => new ShipmentResponsForLandingeDto
+            List<ShipmentResponsForLandingeDto> result;
+
+            if (loggedInUser.IsCompany?.Trim().ToLower() == "yes")
+            {
+                var userTransporterId = loggedInUser.FullName?.Trim().ToLower();
+
+                result = allShipments.Select(shipment => new ShipmentResponsForLandingeDto
                 {
                     ShipmentId = shipment.ShipmentId,
                     TransporterId = shipment.TransporterId,
                     From = shipment.From,
                     To = shipment.To,
                     TimeCreated = shipment.TimeCreated,
-                    Quote = "",
+                    Quote = "", // Your logic for Quote here if needed
                     Customer = shipment.Customer,
                     Status = shipment.Status,
                     PickupDate = shipment.PickupDate,
                     DeliveryDate = shipment.DeliveryDate,
                     Item = shipment.Item,
-                    AsBidded= shipment.Quotes.Count>0 ? "Yes" : "No",
                     Quotes = shipment.Quotes
+                                     .Where(q => q.TransporterId?.Trim().ToLower() == userTransporterId)
+                                     .ToList(),
+                    AsBidded = shipment.Quotes.Any(q => q.TransporterId?.Trim().ToLower() == userTransporterId) ? "Yes" : "No"
                 }).ToList();
             }
             else
             {
-                var shipments = await _unitOfWork.ManageShipmentRepo.GetShipmentsLanding();
-                var finalShipments = shipments.Where(o => o.UserId.Trim() == loggedInUser.UserId.Trim()).ToList();
-                result = finalShipments.Select(shipment => new ShipmentResponsForLandingeDto
-                {
-                    ShipmentId = shipment.ShipmentId,
-                    TransporterId = shipment.TransporterId,
-                    From = shipment.From,
-                    To = shipment.To,
-                    TimeCreated = shipment.TimeCreated,
-                    Quote = "",
-                    Customer = shipment.Customer,
-                    Status = shipment.Status,
-                    PickupDate = shipment.PickupDate,
-                    DeliveryDate = shipment.DeliveryDate,
-                    Item = shipment.Item,
-                    Quotes = shipment.Quotes
-                }).ToList();
+                var userId = loggedInUser.UserId?.Trim();
+
+                result = allShipments
+                    .Where(s => s.UserId?.Trim() == userId)
+                    .Select(shipment => new ShipmentResponsForLandingeDto
+                    {
+                        ShipmentId = shipment.ShipmentId,
+                        TransporterId = shipment.TransporterId,
+                        From = shipment.From,
+                        To = shipment.To,
+                        TimeCreated = shipment.TimeCreated,
+                        Quote = "",
+                        Customer = shipment.Customer,
+                        Status = shipment.Status,
+                        PickupDate = shipment.PickupDate,
+                        DeliveryDate = shipment.DeliveryDate,
+                        Item = shipment.Item,
+                        Quotes = shipment.Quotes
+                    })
+                    .ToList();
             }
-            return new ApiResponse<IEnumerable<ShipmentResponsForLandingeDto>> { Data = result, Message = "Shipments retrieved successfully", Status = true, StatusCode = StatusEnum.Success };
+
+            return new ApiResponse<IEnumerable<ShipmentResponsForLandingeDto>>
+            {
+                Data = result,
+                Message = "Shipments retrieved successfully",
+                Status = true,
+                StatusCode = StatusEnum.Success
+            };
         }
+        public async Task<ApiResponse<IEnumerable<ShipmentResponsForLandingeDto>>> GetShipments(int pageSize, int pageNumber, int source)
+        {
+            var loggedInUser = await _authService.ValidateRequest();
+            var allShipments = await _unitOfWork.ManageShipmentRepo.GetShipmentsLanding();
+            if(loggedInUser.Role?.Trim().ToLower() == "agent")
+            {
+                switch (source)
+                {
+                    case 1: // For Transporters
+                        allShipments = allShipments
+                            .Where(s => s.Status.ToLower() == "in-transit");
+                        break;
+                    case 2: // For Shippers
+                        allShipments = allShipments
+                            .Where(s => s.Status.ToLower() != "in-transit");
+                        break;
+                    default:
+                        break;
+                }
+            }
+            List<ShipmentResponsForLandingeDto> result;
+
+            if (loggedInUser.IsCompany?.Trim().ToLower() == "yes")
+            {
+                var userTransporterId = loggedInUser.FullName?.Trim().ToLower();
+
+                result = allShipments
+                    .Select(shipment => new ShipmentResponsForLandingeDto
+                    {
+                        ShipmentId = shipment.ShipmentId,
+                        TransporterId = shipment.TransporterId,
+                        From = shipment.From,
+                        To = shipment.To,
+                        TimeCreated = shipment.TimeCreated,
+                        Quote = shipment.Quote,
+                        Customer = shipment.Customer,
+                        Status = shipment.Status,
+                        PickupDate = shipment.PickupDate,
+                        DeliveryDate = shipment.DeliveryDate,
+                        Item = shipment.Item,
+                        Quotes = shipment.Quotes
+                                          .Where(q => q.TransporterId?.Trim().ToLower() == userTransporterId)
+                                          .ToList(),
+                        AsBidded = shipment.Quotes.Any(q => q.TransporterId?.Trim().ToLower() == userTransporterId) ? "Yes" : "No"
+                    })
+                    .Skip((pageSize - 1) * pageNumber)
+                    .Take(pageNumber)
+                    .ToList();
+            }
+            else
+            {
+                var userId = loggedInUser.UserId?.Trim();
+
+                result = allShipments
+                    .Where(s => s.UserId?.Trim() == userId)
+                    .Select(shipment => new ShipmentResponsForLandingeDto
+                    {
+                        ShipmentId = shipment.ShipmentId,
+                        TransporterId = shipment.TransporterId,
+                        From = shipment.From,
+                        To = shipment.To,
+                        TimeCreated = shipment.TimeCreated,
+                        Quote = shipment.Quote,
+                        Customer = shipment.Customer,
+                        Status = shipment.Status,
+                        PickupDate = shipment.PickupDate,
+                        DeliveryDate = shipment.DeliveryDate,
+                        Item = shipment.Item,
+                        Quotes = shipment.Quotes
+                    })
+                    .Skip((pageSize - 1) * pageNumber)
+                    .Take(pageNumber)
+                    .ToList();
+            }
+
+            return new ApiResponse<IEnumerable<ShipmentResponsForLandingeDto>>
+            {
+                Data = result,
+                Message = "Shipments retrieved successfully",
+                Status = true,
+                StatusCode = StatusEnum.Success
+            };
+        }
+
 
         private string SaveImages(string? fileContent)
         {

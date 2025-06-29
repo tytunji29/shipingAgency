@@ -30,44 +30,71 @@ namespace JetSend.Respository.Repos
             var shipments = await _db.Shipments.FirstOrDefaultAsync(o => o.ShipmentId == shipId);
             return shipments;
         }
+      
         public async Task<IEnumerable<ShipmentResponsForLandingeDto>> GetShipmentsLanding()
         {
-            var query = from s in _db.Shipments
-                        join d in _db.DeliveryPickups on s.Id equals d.ShipmentId
-                        join i in _db.ItemTypes on s.ItemId equals i.Id
-                        join i0 in _db.ItemCategories on i.ItemCategoryId equals i0.Id
-                        join c in _db.Customers on s.UserId equals c.UserId.ToString()
-                        select new ShipmentResponsForLandingeDto
-                        {
-                            TimeCreated = s.TimeCreated,
-                            UserId = s.UserId,
-                            ShipmentId = s.ShipmentId,
-                            From = d.PickUpAddress,
-                            To = d.DeliveryAddress,
-                            TransporterId = s.TransporterId,
-                            Quote = s.Amount.ToString("F2"),
-                            PickupDate = d.PickupDate,
-                            DeliveryDate = d.DeliveryDate,
-                            Status = s.Status,
-                            Customer = $"{c.FirstName} {c.LastName}",
-                            Item = new ItemCat
-                            {
-                                Name = i.Name,
-                                Description = i0.Name
-                            },
-                            Quotes = _db.Quotes
-                                .Where(q => q.ShipmentId == s.ShipmentId)
-                                .Select(q => new ReturnQuotes
-                                {
-                                    QuoteId = q.QuoteId,
-                                    ShipmentId = q.ShipmentId,
-                                    TransporterId = q.TransporterId,
-                                    Amount = q.Amount,
-                                    DateSubmitted = q.DateSubmitted
-                                }).ToList()
-                        };
+            var shipments = await (
+                from s in _db.Shipments
+                join d in _db.DeliveryPickups on s.Id equals d.ShipmentId
+                join i in _db.ItemTypes on s.ItemTypeId equals i.Id
+                join ic in _db.ItemCategories on i.ItemCategoryId equals ic.Id
+                join c in _db.Customers on s.UserId equals c.UserId.ToString()
+                select new
+                {
+                    s.TimeCreated,
+                    s.UserId,
+                    s.ShipmentId,
+                    From = d.PickUpAddress,
+                    To = d.DeliveryAddress,
+                    s.TransporterId,
+                    QuoteAmount = s.Amount,
+                    d.PickupDate,
+                    d.DeliveryDate,
+                    s.Status,
+                    CustomerName = $"{c.FirstName} {c.LastName}",
+                    ItemName = i.Name,
+                    ItemCategoryName = ic.Name
+                }
+            ).OrderBy(o => o.TimeCreated).ToListAsync();
 
-            var result = query.OrderBy(o=>o.TimeCreated);
+            var shipmentIds = shipments.Select(s => s.ShipmentId).ToList();
+
+            var quotes = await _db.Quotes
+                .Where(q => shipmentIds.Contains(q.ShipmentId))
+                .Select(q => new ReturnQuotes
+                {
+                    QuoteId = q.QuoteId,
+                    ShipmentId = q.ShipmentId,
+                    TransporterId = q.TransporterId,
+                    Amount = q.Amount.ToString(),
+                    DateSubmitted = q.DateSubmitted
+                })
+                .ToListAsync();
+
+            var groupedQuotes = quotes.GroupBy(q => q.ShipmentId)
+                                       .ToDictionary(g => g.Key, g => g.ToList());
+
+            var result = shipments.Select(s => new ShipmentResponsForLandingeDto
+            {
+                TimeCreated = s.TimeCreated,
+                UserId = s.UserId,
+                ShipmentId = s.ShipmentId,
+                From = s.From,
+                To = s.To,
+                TransporterId = s.TransporterId,
+                Quote = s.QuoteAmount.ToString("F2"),
+                PickupDate = s.PickupDate,
+                DeliveryDate = s.DeliveryDate,
+                Status = s.Status,
+                Customer = s.CustomerName,
+                Item = new ItemCat
+                {
+                    Name = s.ItemName,
+                    Description = s.ItemCategoryName
+                },
+                Quotes = groupedQuotes.ContainsKey(s.ShipmentId) ? groupedQuotes[s.ShipmentId] : new List<ReturnQuotes>()
+            }).ToList();
+
             return result;
         }
 

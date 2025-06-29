@@ -16,7 +16,7 @@ namespace JetSend.Domain.Entities
         public int Weight { get; set; }
         public int Height { get; set; }
         public int Quantity { get; set; }
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
         public string ImageUrl { get; set; }
         public string Instructions { get; set; }
         public string Status { get; set; }

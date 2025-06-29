@@ -8,6 +8,7 @@ namespace JetSend.Domain.Interfaces.IServices
     {
         Task<ApiResponse> CreateShipment(CreateShipmentRequestDto request);
         Task<ApiResponse<IEnumerable<ShipmentResponsForLandingeDto>>> GetShipments();
+        Task<ApiResponse<IEnumerable<ShipmentResponsForLandingeDto>>> GetShipments(int pageSize, int pageNumber, int source);
         Task<ApiResponse<IEnumerable<ShipmentResponseDto>>> GetShipments(string? status);
     }
 }

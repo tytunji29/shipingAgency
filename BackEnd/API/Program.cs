@@ -12,14 +12,29 @@ builder.Services.AddApiVersioning(Options =>
     Options.DefaultApiVersion = ApiVersion.Default;
     Options.ReportApiVersions = true;
 });
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("ProductionPolicy", policy =>
+//    {
+//        policy.WithOrigins("https://shippingagencyfe.onrender.com")
+//              .AllowAnyHeader()
+//              .AllowAnyMethod()
+//              .AllowCredentials(); // If using cookies/auth
+//    });
+//});
+
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("ProductionPolicy", policy =>
     {
-        policy.WithOrigins("https://shippingagencyfe.onrender.com")
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials(); // If using cookies/auth
+        policy.WithOrigins(
+            "https://shippingagencyfe.onrender.com",
+            "http://localhost:8081" // ?? allow Expo / local React Native dev
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials(); // If using auth cookies or headers
     });
 });
 

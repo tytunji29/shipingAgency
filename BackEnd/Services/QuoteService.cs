@@ -48,7 +48,7 @@ namespace JetSendsServices
             if (quote == null)
                 return new ApiResponse("Quote not found", StatusEnum.NoRecordFound, false);
             quote.IsAccepted = true;
-            quote.Amount = (Convert.ToDecimal(quote.Amount) * 1.10m).ToString();
+            quote.Amount = (Convert.ToDecimal(quote.Amount) * 1.10m);
             quote.Status = "Accepted";
 
             await _unitOfWork.ManageQuoteRepo.UpdateQuote(quote);
@@ -68,7 +68,7 @@ namespace JetSendsServices
             Quotes qu = new Quotes();
             qu.TransporterId = user.FullName;
             qu.ShipmentId = quoteId.ShipmentId;
-            qu.Amount = quoteId.Amount;
+            qu.Amount = Convert.ToDecimal(quoteId.Amount);
             qu.Status = "Pending";
             qu.IsAccepted = false;
             qu.QuoteId = Guid.NewGuid().ToString();

@@ -25,6 +25,7 @@ namespace JetSend.Domain.Dtos.ResponseDtos
         public string UserId { get; set; }
         public string TransporterId { get; set; }
         public string From { get; set; }
+        public decimal Amount { get; set; }
         public string To { get; set; }
         public string Quote { get; set; }
         public string PickupDate { get; set; }

@@ -99,6 +99,11 @@ namespace JetSend.Respository.Repos
             await _db.SaveChangesAsync();
             return entity.Id;
         }
+        public async Task UpdateAgent(Agent entity)
+        {
+            _db.Agents.Update(entity);
+            await _db.SaveChangesAsync();
+        }
 
         public async Task UpdateCustomer(Customer entity)
         {
