@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JetSend.Respository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c0600296c24c5e7767a3d5c58c4c605c563da98")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02b0a65c2e9b41cbef6df841a884137b40c4b7a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("JetSend.Respository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JetSend.Respository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

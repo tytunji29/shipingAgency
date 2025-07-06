@@ -21,6 +21,7 @@ using JetSend.Respository.DataContext;
 using JetSend.Respository.Repos;
 using JetSendsServices;
 using CloudinaryDotNet;
+using StackExchange.Redis;
 
 namespace JetSend.API.Extensions
 {
@@ -41,6 +42,8 @@ namespace JetSend.API.Extensions
                 opt.UseSqlServer(configuration.GetConnectionString("JetSendcon")!);
             });
 
+            services.AddSingleton<IConnectionMultiplexer>(provider =>
+    ConnectionMultiplexer.Connect("RedisConnectionString"));
             // 🔐 Configure Identity with custom ApplicationUsers and ApplicationUsersRole
             services.AddIdentity<ApplicationUsers, ApplicationUsersRole>(options =>
             {

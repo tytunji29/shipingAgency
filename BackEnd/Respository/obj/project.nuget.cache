@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aYkx0nO6D6Q=",
+  "dgSpecHash": "Gca1MZHZHMg=",
   "success": true,
   "projectFilePath": "C:\\Users\\HP Elitebook 840 G2\\Desktop\\shipingAgency\\BackEnd\\Respository\\JetSend.Respository.csproj",
   "expectedPackageFiles": [
@@ -64,7 +64,9 @@
     "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\serilog\\4.1.0\\serilog.4.1.0.nupkg.sha512",
+    "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\stackexchange.redis\\2.8.41\\stackexchange.redis.2.8.41.nupkg.sha512",
     "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\system.buffers\\4.6.0\\system.buffers.4.6.0.nupkg.sha512",
     "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\HP Elitebook 840 G2\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
