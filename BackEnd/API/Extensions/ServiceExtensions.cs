@@ -41,9 +41,8 @@ namespace JetSend.API.Extensions
             {
                 opt.UseSqlServer(configuration.GetConnectionString("JetSendcon")!);
             });
+            services.AddHttpClient<RedisTrackingService>();
 
-            services.AddSingleton<IConnectionMultiplexer>(provider =>
-    ConnectionMultiplexer.Connect("RedisConnectionString"));
             // 🔐 Configure Identity with custom ApplicationUsers and ApplicationUsersRole
             services.AddIdentity<ApplicationUsers, ApplicationUsersRole>(options =>
             {
@@ -168,7 +167,7 @@ namespace JetSend.API.Extensions
         static void RepoServices(this IServiceCollection services, IConfiguration config)
         {
             //Repo
-
+            services.AddScoped<RedisTrackingService>();
             services.AddScoped<IManageChatMessageRepo, ManageChatMessageRepo>();
             services.AddScoped<IManageCompanyRepo, ManageCompanyRepo>();
             services.AddScoped<IManageDeliveryPickupRepo, ManageDeliveryPickupRepo>();

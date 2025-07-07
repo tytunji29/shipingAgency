@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace JetSend.Domain.Entities
 {
+    public class RateRider : BaseEntity
+    {
+        public string Rating { get; set; }
+        public string TransporterId { get; set; }
+        public string TransId { get; set; }
+        public string ShipmentId { get; set; }
+    }
     public class Shipment : BaseEntity
     {
         public string UserId { get; set; }

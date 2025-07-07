@@ -362,3 +362,5 @@ C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Debug\net8.0\
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Debug\net8.0\JetSend.API.pdb
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Debug\net8.0\JetSend.API.genruntimeconfig.cache
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Debug\net8.0\ref\JetSend.API.dll
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\bin\Debug\net8.0\StackExchange.Redis.dll

@@ -88,7 +88,32 @@ namespace JetSendsServices
             var result = await _unitOfWork.ManageShipmentRepo.GetShipments(status);
             return new ApiResponse<IEnumerable<ShipmentResponseDto>> { Data = result, Message = "Shipments retrieved successfully", Status = true, StatusCode = StatusEnum.Success };
         }
-
+        public async Task<ApiResponse> RateRider(RateRiderRequestDto request)
+        {
+            var shipment = new RateRider
+            {
+                Rating = request.Rating,
+                TransporterId = request.RiderId,
+                TransId=request.TransId,
+                ShipmentId=request.ShipmentId,
+                TimeCreated = DateTime.Now
+            };
+            await _unitOfWork.ManageShipmentRepo.AddshipmentAsync(shipment);
+            return new ApiResponse("Rider Rated Successfully", StatusEnum.Success, true);
+        }
+        public async Task<ApiResponse<ShipmentDto>> GetShipment()
+        {
+            var loggedInUser = await _authService.ValidateRequest();
+            var result = await _unitOfWork.ManageShipmentRepo.GetShipmentLatest(loggedInUser.UserId);
+            
+            return new ApiResponse<ShipmentDto>
+            {
+                Data = result,
+                Message = "Shipments retrieved successfully",
+                Status = true,
+                StatusCode = StatusEnum.Success
+            };
+        }
         public async Task<ApiResponse<IEnumerable<ShipmentResponsForLandingeDto>>> GetShipments()
         {
             var loggedInUser = await _authService.ValidateRequest();
@@ -155,7 +180,7 @@ namespace JetSendsServices
         {
             var loggedInUser = await _authService.ValidateRequest();
             var allShipments = await _unitOfWork.ManageShipmentRepo.GetShipmentsLanding();
-            if(loggedInUser.Role?.Trim().ToLower() == "agent")
+            if (loggedInUser.Role?.Trim().ToLower() == "agent")
             {
                 switch (source)
                 {
@@ -172,7 +197,7 @@ namespace JetSendsServices
                 }
             }
             List<ShipmentResponsForLandingeDto> result;
-
+            allShipments= allShipments.OrderByDescending(s => s.TimeCreated).ToList();
             if (loggedInUser.IsCompany?.Trim().ToLower() == "yes")
             {
                 var userTransporterId = loggedInUser.FullName?.Trim().ToLower();
@@ -249,5 +274,7 @@ namespace JetSendsServices
             }
             return imagePath;
         }
+
+
     }
 }

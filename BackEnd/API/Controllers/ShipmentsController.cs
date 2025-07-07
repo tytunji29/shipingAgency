@@ -23,6 +23,13 @@ namespace JetSend.API.Controllers
             var response = await _shipmentService.CreateShipment(request);
             return ResponseCode(response);
         }
+        [HttpPost("rate-rider")]
+        [ProducesResponseType(typeof(ApiResponse), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> RateRider([FromBody] RateRiderRequestDto request)
+        {
+            var response = await _shipmentService.RateRider(request);
+            return ResponseCode(response);
+        }
 
         [HttpGet("get-all-shipment")]
         [ProducesResponseType(typeof(ApiResponse<IEnumerable<ShipmentResponseDto>>), (int)HttpStatusCode.OK)]
@@ -35,7 +42,7 @@ namespace JetSend.API.Controllers
         [ProducesResponseType(typeof(ApiResponse<IEnumerable<ShipmentResponseDto>>), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetAllLanding(int page, int pageSize, int source)
         {
-            var response = await _shipmentService.GetShipments(page, pageSize,source);
+            var response = await _shipmentService.GetShipments(page, pageSize, source);
             return ResponseCode(response);
         }
         [HttpGet("get-all-shipment-landing")]
@@ -43,6 +50,13 @@ namespace JetSend.API.Controllers
         public async Task<IActionResult> GetAllLanding()
         {
             var response = await _shipmentService.GetShipments();
+            return ResponseCode(response);
+        }
+        [HttpGet("get-lastest-shipment")]
+        [ProducesResponseType(typeof(ApiResponse<IEnumerable<ShipmentResponseDto>>), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> GetMostRecent()
+        {
+            var response = await _shipmentService.GetShipment();
             return ResponseCode(response);
         }
     }

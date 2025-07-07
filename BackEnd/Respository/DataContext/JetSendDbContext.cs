@@ -49,6 +49,7 @@ public class JetSendDbContext : IdentityDbContext<ApplicationUsers>
     public DbSet<ItemCategory> ItemCategories { get; set; }
     public DbSet<ItemType> ItemTypes { get; set; }
     public DbSet<Quotes> Quotes { get; set; }
+    public DbSet<RateRider> RateRiders { get; set; }
     public DbSet<Shipment> Shipments { get; set; }
     public DbSet<Transporter> Transporters { get; set; }
     public DbSet<Review> Reviews { get; set; }

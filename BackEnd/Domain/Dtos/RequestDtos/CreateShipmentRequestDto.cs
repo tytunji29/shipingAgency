@@ -40,8 +40,11 @@ namespace JetSend.Domain.Dtos.RequestDtos
         public decimal? DeliveryLatitude { get; set; }
     }
 
-    public class ImageDetails
+    public class RateRiderRequestDto
     {
-
+        public string RiderId { get; set; }
+        public string TransId { get; set; }
+        public string ShipmentId { get; set; }
+        public string Rating { get; set; }
     }
 }

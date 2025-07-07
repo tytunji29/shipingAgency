@@ -18,6 +18,12 @@ namespace JetSend.Domain.Dtos.ResponseDtos
         public string Status { get; set; }
 
     }
+    public class ShipmentDto
+    {
+        public string ShipmentId { get; set; }
+        public string Transporter { get; set; }
+        public string TransId { get; set; }
+    }
     public class ShipmentResponsForLandingeDto
     {
         public string AsBidded { get; set; }
@@ -43,8 +49,11 @@ namespace JetSend.Domain.Dtos.ResponseDtos
         public string QuoteId { get; set; }
         public string ShipmentId { get; set; }
         public string TransporterId { get; set; }
+        public string TransId { get; set; }
         public string Amount { get; set; }
         public string DateSubmitted { get; set; }
+        public string RiderRating { get; set; }
+        public string RiderRatingCount { get; set; }
     }
     public class ItemCat
     {

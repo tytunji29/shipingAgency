@@ -48,9 +48,11 @@ C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Release\net8.
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Release\net8.0\PubTmp\Out\Microsoft.SqlServer.Server.dll
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Release\net8.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Release\net8.0\PubTmp\Out\Pipelines.Sockets.Unofficial.dll
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Release\net8.0\PubTmp\Out\SendGrid.dll
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Release\net8.0\PubTmp\Out\SendGrid.Extensions.DependencyInjection.dll
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Release\net8.0\PubTmp\Out\Serilog.dll
+C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Release\net8.0\PubTmp\Out\StackExchange.Redis.dll
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Release\net8.0\PubTmp\Out\StarkbankEcdsa.dll
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\HP Elitebook 840 G2\Desktop\shipingAgency\BackEnd\API\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll

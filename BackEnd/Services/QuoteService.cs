@@ -67,6 +67,7 @@ namespace JetSendsServices
             var userRec = await _auth.GetShipperDetailByQuote(quoteId.ShipmentId);
             Quotes qu = new Quotes();
             qu.TransporterId = user.FullName;
+            qu.TransId = user.UserId.ToString();
             qu.ShipmentId = quoteId.ShipmentId;
             qu.Amount = Convert.ToDecimal(quoteId.Amount);
             qu.Status = "Pending";

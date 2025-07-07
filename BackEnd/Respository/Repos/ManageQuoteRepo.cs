@@ -53,7 +53,15 @@ namespace JetSend.Respository.Repos
         {
             try
             {
-
+                if (quoteId.TransId != null)
+                {
+                    var ratings = _db.RateRiders.Where(o => o.TransId == quoteId.TransId);
+                    var count = ratings.Count();
+                    var average = count > 0 ? ratings.Average(o => Convert.ToDecimal(o.Rating)) : 0;
+                    var averageWhole = Math.Round(average, 0, MidpointRounding.AwayFromZero);
+                    quoteId.TransporterRating = averageWhole.ToString();
+                    quoteId.RaterCount = count.ToString();
+                }
                 _db.Quotes.Add(quoteId);
                 _db.SaveChanges();
                 return true;

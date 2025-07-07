@@ -13,4 +13,12 @@ namespace JetSend.Domain.Dtos.RequestDtos
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
     }
+
+    public class LocationDto
+    {
+        public double Lat { get; set; }
+        public double Lng { get; set; }
+        public DateTime Timestamp { get; set; }
+    }
+
 }

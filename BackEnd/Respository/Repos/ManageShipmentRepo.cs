@@ -14,6 +14,11 @@ namespace JetSend.Respository.Repos
             _db = db;
         }
 
+        public async Task AddshipmentAsync(RateRider request)
+        {
+            await _db.RateRiders.AddAsync(request);
+            await _db.SaveChangesAsync();
+        }
         public async Task AddshipmentAsync(Shipment request)
         {
             await _db.Shipments.AddAsync(request);
@@ -30,7 +35,33 @@ namespace JetSend.Respository.Repos
             var shipments = await _db.Shipments.FirstOrDefaultAsync(o => o.ShipmentId == shipId);
             return shipments;
         }
-      
+        public async Task<ShipmentDto?> GetShipmentLatest(string userId)
+        {
+            var res = new ShipmentDto();
+            var rec = await _db.Shipments
+     .AsNoTracking()
+     .Where(o => o.UserId == userId && o.Status == "Completed")
+     .OrderByDescending(o => o.TimeCreated)
+     .FirstOrDefaultAsync();
+            if (rec != null)
+            {
+                //check if the shipment has been rated
+                var hasRated = await _db.RateRiders.AnyAsync(r => r.ShipmentId == rec.ShipmentId);
+                if (hasRated)
+                {
+                    // If rated, return null
+                    return res;
+                }
+                res.Transporter = rec.TransporterId;
+                res.ShipmentId = rec.ShipmentId;
+                var qu = _db.Quotes.FirstOrDefault(o => o.ShipmentId == rec.ShipmentId && o.TransporterId.ToLower().Trim() == rec.TransporterId.ToLower().ToLower());
+                if (qu != null)
+                    res.TransId = qu.TransId;
+            }
+            return res;
+        }
+
+
         public async Task<IEnumerable<ShipmentResponsForLandingeDto>> GetShipmentsLanding()
         {
             var shipments = await (
@@ -59,14 +90,20 @@ namespace JetSend.Respository.Repos
 
             var shipmentIds = shipments.Select(s => s.ShipmentId).ToList();
 
+            var transporterIds = shipments.Select(o => o.TransporterId).Distinct().ToList();
+
+
             var quotes = await _db.Quotes
                 .Where(q => shipmentIds.Contains(q.ShipmentId))
                 .Select(q => new ReturnQuotes
                 {
                     QuoteId = q.QuoteId,
                     ShipmentId = q.ShipmentId,
+                    TransId = q.TransId,
                     TransporterId = q.TransporterId,
                     Amount = q.Amount.ToString(),
+                    RiderRating=!string.IsNullOrEmpty(q.TransporterRating)? q.TransporterRating:"0",
+                    RiderRatingCount = !string.IsNullOrEmpty(q.RaterCount) ? q.RaterCount : "0",
                     DateSubmitted = q.DateSubmitted
                 })
                 .ToListAsync();
@@ -92,7 +129,8 @@ namespace JetSend.Respository.Repos
                     Name = s.ItemName,
                     Description = s.ItemCategoryName
                 },
-                Quotes = groupedQuotes.ContainsKey(s.ShipmentId) ? groupedQuotes[s.ShipmentId] : new List<ReturnQuotes>()
+                Quotes = groupedQuotes.ContainsKey(s.ShipmentId) ? groupedQuotes[s.ShipmentId] : new List<ReturnQuotes>(),
+
             }).ToList();
 
             return result;

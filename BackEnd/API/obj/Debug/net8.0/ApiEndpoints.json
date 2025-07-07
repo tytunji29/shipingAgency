@@ -300,9 +300,44 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "JetSend.Domain.Dtos.RequestDtos.Account.UpdateCustomerRequest",
-        "IsRequired": true
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Type",
+        "Type": "System.String",
+        "IsRequired": false
       },
       {
         "Name": "version",
@@ -1297,6 +1332,11 @@
         "IsRequired": false
       },
       {
+        "Name": "source",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
         "Name": "version",
         "Type": "",
         "IsRequired": true
@@ -1305,6 +1345,63 @@
     "ReturnTypes": [
       {
         "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Dtos.ResponseDtos.ShipmentResponseDto, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.ShipmentsController",
+    "Method": "GetMostRecent",
+    "RelativePath": "app/v{version}/Shipments/get-lastest-shipment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[JetSend.Domain.Dtos.ResponseDtos.ShipmentResponseDto, JetSend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.ShipmentsController",
+    "Method": "RateRider",
+    "RelativePath": "app/v{version}/Shipments/rate-rider",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JetSend.Domain.Dtos.RequestDtos.RateRiderRequestDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JetSend.Core.Infranstructure.Common.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1370,6 +1467,53 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.TrackerController",
+    "Method": "StoreLocation",
+    "RelativePath": "app/v{version}/Tracker/{shipmentId}/location",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shipmentId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "entry",
+        "Type": "JetSend.Domain.Dtos.RequestDtos.LocationDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JetSend.API.Controllers.TrackerController",
+    "Method": "GetLatestLocation",
+    "RelativePath": "app/v{version}/Tracker/{shipmentId}/location",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shipmentId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "JetSend.API.Controllers.TransportersController",
