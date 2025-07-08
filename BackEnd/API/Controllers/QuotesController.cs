@@ -43,7 +43,14 @@ namespace JetSend.API.Controllers
         [ProducesResponseType(typeof(ApiResponse<string>), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> AcceptBid(string quouteId)
         {
-            var response = await _quoteService.AcceptBid(quouteId);
+            var response = await _quoteService.AcceptBid(quouteId,1);
+            return ResponseCode(response);
+        }
+        [HttpPost("accept-bid-after-payment")]
+        [ProducesResponseType(typeof(ApiResponse<string>), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> AcceptBidAfterPayment(string quouteId)
+        {
+            var response = await _quoteService.AcceptBid(quouteId,2);
             return ResponseCode(response);
         }
     }

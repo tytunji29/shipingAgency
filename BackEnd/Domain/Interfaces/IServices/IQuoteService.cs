@@ -8,7 +8,7 @@ namespace JetSend.Domain.Interfaces.IServices
     {
         Task<ApiResponse<IEnumerable<QuoteResponseDto>>> GetAll(string? status);
         Task<ApiResponse> AcceptBid(long quoteId);
-        Task<ApiResponse> AcceptBid(string quoteId);
+        Task<ApiResponse> AcceptBid(string quoteId, int source);
         Task<ApiResponse> AddQuote(Quotes quoteId);
         Task<ApiResponse> AddQuote(QuotesFm quoteId);
     }

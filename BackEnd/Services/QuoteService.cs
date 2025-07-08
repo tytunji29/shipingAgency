@@ -41,7 +41,7 @@ namespace JetSendsServices
 
             return new ApiResponse("Quoted Accepted", StatusEnum.Success, true);
         }
-        public async Task<ApiResponse> AcceptBid(string quoteId)
+        public async Task<ApiResponse> AcceptBid(string quoteId, int source)
         {
             //ValidateRequest();
             var quote = await _unitOfWork.ManageQuoteRepo.Get(quoteId);
@@ -49,7 +49,10 @@ namespace JetSendsServices
                 return new ApiResponse("Quote not found", StatusEnum.NoRecordFound, false);
             quote.IsAccepted = true;
             quote.Amount = (Convert.ToDecimal(quote.Amount) * 1.10m);
+            if(source==1)
             quote.Status = "Accepted";
+            else
+                quote.Status = "Completed";
 
             await _unitOfWork.ManageQuoteRepo.UpdateQuote(quote);
 

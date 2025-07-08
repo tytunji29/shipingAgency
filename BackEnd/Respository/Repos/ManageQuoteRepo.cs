@@ -78,7 +78,7 @@ namespace JetSend.Respository.Repos
             _db.Quotes.Update(quote);
 
             var shipment = _db.Shipments.FirstOrDefault(o => o.ShipmentId == quote.ShipmentId);
-            shipment.Status = "Accepted";
+            shipment.Status = quote.Status;
             shipment.Amount = quote.Amount;
             shipment.TransporterId = quote.TransporterId;
             await _db.SaveChangesAsync();
