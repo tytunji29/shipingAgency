@@ -59,5 +59,12 @@ namespace JetSend.API.Controllers
             var response = await _shipmentService.GetShipment();
             return ResponseCode(response);
         }
+        [HttpGet("get-shipment-after-payment")]
+        [ProducesResponseType(typeof(ApiResponse<IEnumerable<ShipmentResponseDto>>), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> GetShipmentAfterPayment()
+        {
+            var response = await _shipmentService.GetShipmentAfterPayment();
+            return ResponseCode(response);
+        }
     }
 }

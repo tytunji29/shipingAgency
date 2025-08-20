@@ -12,6 +12,7 @@ namespace JetSend.Domain.Entities
         public string TransporterId { get; set; }
         public string TransId { get; set; }
         public string ShipmentId { get; set; }
+        public string Comment { get; set; }
     }
     public class Shipment : BaseEntity
     {

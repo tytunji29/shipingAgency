@@ -39,7 +39,9 @@ namespace JetSend.API.Extensions
             // 🔌 Configure Entity Framework + SQL Server
             services.AddDbContext<JetSendDbContext>(opt =>
             {
-                opt.UseSqlServer(configuration.GetConnectionString("JetSendcon")!);
+               // opt.UseSqlServer(configuration.GetConnectionString("JetSendcon")!);
+                opt.UseNpgsql(configuration.GetConnectionString("JetSendcon"));
+                //opt.AddInterceptors(sp.GetRequiredService<UtcDateInterceptor>());
             });
             services.AddHttpClient<RedisTrackingService>();
 

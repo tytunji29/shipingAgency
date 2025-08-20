@@ -46,5 +46,6 @@ namespace JetSend.Domain.Dtos.RequestDtos
         public string TransId { get; set; }
         public string ShipmentId { get; set; }
         public string Rating { get; set; }
+        public string Comment { get; set; }
     }
 }

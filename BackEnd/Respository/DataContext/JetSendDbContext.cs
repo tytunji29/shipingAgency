@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using static JetSend.Respository.DataContext.JetSendDbContextFactory;
 
 namespace JetSend.Respository.DataContext;
 
@@ -18,8 +17,7 @@ public class JetSendDbContextFactory : IDesignTimeDbContextFactory<JetSendDbCont
             .Build();
 
         var optionsBuilder = new DbContextOptionsBuilder<JetSendDbContext>();
-        optionsBuilder.UseSqlServer(config.GetConnectionString("JetSendcon"));
-
+        optionsBuilder.UseNpgsql(config.GetConnectionString("JetSendcon"));
         return new JetSendDbContext(optionsBuilder.Options);
     }
 }

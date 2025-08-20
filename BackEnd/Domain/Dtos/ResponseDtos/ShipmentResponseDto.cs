@@ -24,6 +24,15 @@ namespace JetSend.Domain.Dtos.ResponseDtos
         public string Transporter { get; set; }
         public string TransId { get; set; }
     }
+    public class ShipmentAfterPaymentDto
+    {
+        public string Customer { get; set; }
+        public string CustomerPhoneNumber { get; set; }
+        public string ShipmentCode { get; set; }
+        public string Transporter { get; set; }
+        public string TransporterPhoneNumber { get; set; }
+        public string Status { get; set; }
+    }
     public class ShipmentResponsForLandingeDto
     {
         public string AsBidded { get; set; }

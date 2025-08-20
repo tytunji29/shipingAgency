@@ -13,6 +13,7 @@ namespace JetSend.Domain.Entities
         public string DeliveryAddress { get; set; }
         public string PickupDate { get; set; }
         public string DeliveryDate { get; set; }
+        public string PickupStatus { get; set; }
         public decimal? PickupLongitude { get; set; }
         public decimal? PickupLatitude { get; set; }
         public decimal? DeliveryLongitude { get; set; }

@@ -3,6 +3,7 @@ using System;
 using JetSend.Respository.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace JetSend.Respository.Migrations
 {
     [DbContext(typeof(JetSendDbContext))]
-    partial class JetSendDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250820232347_xdfcgvhbjnkfghj")]
+    partial class xdfcgvhbjnkfghj
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

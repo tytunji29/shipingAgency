@@ -78,6 +78,8 @@ namespace JetSend.Respository.Repos
             _db.Quotes.Update(quote);
 
             var shipment = _db.Shipments.FirstOrDefault(o => o.ShipmentId == quote.ShipmentId);
+            var shipmdelent = _db.DeliveryPickups.FirstOrDefault(o => o.ShipmentId == shipment.Id);
+            shipmdelent.PickupStatus= "Ready For Pickup";
             shipment.Status = quote.Status;
             shipment.Amount = quote.Amount;
             shipment.TransporterId = quote.TransporterId;
