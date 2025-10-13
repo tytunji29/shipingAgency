@@ -42,7 +42,6 @@ namespace JetSend.API.Controllers
         {
             var retrievedLocation = await _trackingService.GetLatestLocationAsync<LocationDto>(shipmentId);
            
-            //var ret= new ApiResponse<LocationDto> { StatusCode = StatusEnum.Success, Status = true, Message = "Location Gotten Successfully", Data = retrievedLocation };
             return new ApiResponse<LocationDto>
             {
                 Data = retrievedLocation,
@@ -50,7 +49,6 @@ namespace JetSend.API.Controllers
                 Status = true,
                 StatusCode = StatusEnum.Success
             };
-           // return Ok(ret);
         }
     }
 }

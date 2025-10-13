@@ -30,6 +30,7 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
             "https://shippingagencyfe.onrender.com",
+ "http://localhost:3000",
             "http://localhost:8081" // ?? allow Expo / local React Native dev
         )
         .AllowAnyHeader()

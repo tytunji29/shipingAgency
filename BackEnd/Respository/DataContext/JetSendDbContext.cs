@@ -9,17 +9,51 @@ namespace JetSend.Respository.DataContext;
 
 public class JetSendDbContextFactory : IDesignTimeDbContextFactory<JetSendDbContext>
 {
-    public JetSendDbContext CreateDbContext(string[] args)
-    {
-        var config = new ConfigurationBuilder()
-            .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../API"))
-            .AddJsonFile("appsettings.json")
-            .Build();
+    // public JetSendDbContext CreateDbContext(string[] args)
+    // {
+    //     var config = new ConfigurationBuilder()
+    //         .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../API"))
+    //         .AddJsonFile("appsettings.json")
+    //         .Build();
 
-        var optionsBuilder = new DbContextOptionsBuilder<JetSendDbContext>();
-        optionsBuilder.UseNpgsql(config.GetConnectionString("JetSendcon"));
-        return new JetSendDbContext(optionsBuilder.Options);
+    //     var optionsBuilder = new DbContextOptionsBuilder<JetSendDbContext>();
+    //     optionsBuilder.UseNpgsql(config.GetConnectionString("JetSendcon"));
+    //     return new JetSendDbContext(optionsBuilder.Options);
+    // }
+
+    public JetSendDbContext CreateDbContext(string[] args)
+{
+    var config = new ConfigurationBuilder()
+        .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../API"))
+        .AddJsonFile("appsettings.json")
+        .Build();
+
+    var connStr = config.GetConnectionString("JetSendcon");
+
+    // ✅ Print part of the connection string (mask password for safety)
+    if (!string.IsNullOrEmpty(connStr))
+    {
+        var maskedConn = connStr;
+        var passIndex = maskedConn.IndexOf("Password=", StringComparison.OrdinalIgnoreCase);
+        if (passIndex >= 0)
+        {
+            var end = maskedConn.IndexOf(';', passIndex);
+            if (end == -1) end = maskedConn.Length;
+            maskedConn = maskedConn.Remove(passIndex + 9, end - (passIndex + 9)).Insert(passIndex + 9, "********");
+        }
+        Console.WriteLine($"✅ [DbContextFactory] Connection string loaded successfully: {maskedConn}");
     }
+    else
+    {
+        Console.WriteLine("❌ [DbContextFactory] Connection string is NULL or missing!");
+    }
+
+    var optionsBuilder = new DbContextOptionsBuilder<JetSendDbContext>();
+    optionsBuilder.UseNpgsql(connStr);
+
+    return new JetSendDbContext(optionsBuilder.Options);
+}
+
 }
 
 public class JetSendDbContext : IdentityDbContext<ApplicationUsers>
